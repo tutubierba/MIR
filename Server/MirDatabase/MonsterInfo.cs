@@ -57,7 +57,6 @@ namespace Server.MirDatabase
         {
             Index = reader.ReadInt32();
             Name = reader.ReadString();
-            Console.WriteLine(Name);
 
             Image = (Monster) reader.ReadUInt16();
             AI = reader.ReadByte();

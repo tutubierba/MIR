@@ -52,6 +52,9 @@ Legend of Mir.v12.suo
 /LibraryEditor/obj
 /LibraryViewer/bin
 /Build
+!/Build/Server/Server.MirADB
+!/Build/Server/Server.DB
+!/Build/Server/Server.exe.config
 /.vs
 Packages
 Release
