@@ -58,5 +58,8 @@
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox SpellTextBox;
+        private System.Windows.Forms.Label label25;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

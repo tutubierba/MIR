@@ -375,7 +375,10 @@ namespace Server
             if (ActiveControl != sender) return;
 
             for (int i = 0; i < _selectedQuestInfos.Count; i++)
+            {
                 _selectedQuestInfos[i].RequiredClass = (RequiredClass)RequiredClassComboBox.SelectedItem;
+            }
+
         }
 
         private void OpenQButton_Click(object sender, EventArgs e)

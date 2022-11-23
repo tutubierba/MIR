@@ -142,7 +142,7 @@ public class GuildBuffInfo
         Stats[Stat.HP] = reader.ReadInt32("Buff-" + i.ToString(), "BuffMaxHp", 0);
         Stats[Stat.MP] = reader.ReadInt32("Buff-" + i.ToString(), "BuffMaxMp", 0);
         Stats[Stat.MineRatePercent] = reader.ReadByte("Buff-" + i.ToString(), "BuffMineRate", 0);
-        Stats[Stat.GemRatePercent] = reader.ReadByte("Buff-" + i.ToString(), "BuffGemRate", 0);
+        Stats[Stat.宝玉Percent] = reader.ReadByte("Buff-" + i.ToString(), "BuffGemRate", 0);
         Stats[Stat.FishRatePercent] = reader.ReadByte("Buff-" + i.ToString(), "BuffFishRate", 0);
         Stats[Stat.ExpRatePercent] = reader.ReadByte("Buff-" + i.ToString(), "BuffExpRate", 0);
         Stats[Stat.CraftRatePercent] = reader.ReadByte("Buff-" + i.ToString(), "BuffCraftRate", 0);
@@ -171,7 +171,7 @@ public class GuildBuffInfo
         reader.Write("Buff-" + i.ToString(), "BuffMaxHp", Stats[Stat.HP]);
         reader.Write("Buff-" + i.ToString(), "BuffMaxMp", Stats[Stat.MP]);
         reader.Write("Buff-" + i.ToString(), "BuffMineRate", Stats[Stat.MineRatePercent]);
-        reader.Write("Buff-" + i.ToString(), "BuffGemRate", Stats[Stat.GemRatePercent]);
+        reader.Write("Buff-" + i.ToString(), "BuffGemRate", Stats[Stat.宝玉Percent]);
         reader.Write("Buff-" + i.ToString(), "BuffFishRate", Stats[Stat.FishRatePercent]);
         reader.Write("Buff-" + i.ToString(), "BuffExpRate", Stats[Stat.ExpRatePercent]); ;
         reader.Write("Buff-" + i.ToString(), "BuffCraftRate", Stats[Stat.CraftRatePercent]);

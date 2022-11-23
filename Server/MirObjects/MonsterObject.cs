@@ -406,7 +406,8 @@ namespace Server.MirObjects
                 case 182:
                     return new BlackTortoise(info);
 
-                //case 183: Manticore
+                case 183:
+                    return new Manticore(info);
 
                 case 184:
                     return new DragonWarrior(info); //TODO

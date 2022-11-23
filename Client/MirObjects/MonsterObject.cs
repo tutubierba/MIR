@@ -265,6 +265,9 @@ namespace Client.MirObjects
                 case Monster.RedFaeFlower:
                     Frames = FrameSet.RedFaeFlower;
                     break;
+                case Monster.Manticore:
+                    Frames = FrameSet.Manticore;
+                    break;
                 default:
                     if (BodyLibrary != null)
                     {
@@ -1805,6 +1808,9 @@ namespace Client.MirObjects
                                                 if (ob != null)
                                                     ob.Effects.Add(new Effect(Libraries.Monsters[(ushort)Monster.FurbolgCommander], 320, 5, 500, ob));
                                                 break;
+                                               case Monster.Manticore:
+                                                Effects.Add(new Effect(Libraries.Monsters[(ushort)Monster.Manticore], 505 + (int)Direction * 3, 3, 3 * Frame.Interval, this));
+                                                break;
                                         }
                                         break;
                                     }
@@ -1964,6 +1970,7 @@ namespace Client.MirObjects
                                             case Monster.GlacierSnail:
                                                 Effects.Add(new Effect(Libraries.Monsters[(ushort)Monster.GlacierSnail], 344 + (int)Direction * 5, 5, 5 * Frame.Interval, this));
                                                 break;
+
 
 
 
@@ -2267,6 +2274,14 @@ namespace Client.MirObjects
                                     {
                                         case Monster.RestlessJar:
                                             Effects.Add(new Effect(Libraries.Monsters[(ushort)Monster.RestlessJar], 512, 7, 700, this));
+                                            break;
+                                    }
+                                    break;
+                                case 8:
+                                    switch (BaseImage)
+                                    {
+                                        case Monster.Manticore:
+                                            Effects.Add(new Effect(Libraries.Monsters[(ushort)Monster.Manticore], 536 + (int)Direction * 7, 7, 7 * Frame.Interval, this));
                                             break;
                                     }
                                     break;
@@ -4729,7 +4744,7 @@ namespace Client.MirObjects
                     switch (CurrentAction)
                     {
                         case MirAction.Attack2:
-                            if (FrameIndex >= 3) Libraries.Monsters[(ushort)Monster.Manticore].DrawBlend((536 + FrameIndex + (int)Direction * 4) - 3, DrawLocation, Color.White, true);
+                            Libraries.Monsters[(ushort)Monster.Manticore].DrawBlend((536 + FrameIndex + (int)Direction * 7), DrawLocation, Color.White, true);
                             break;
                     }
                     break;

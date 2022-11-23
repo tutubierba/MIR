@@ -9,7 +9,7 @@ namespace Client.MirObjects
     public class FrameSet : Dictionary<MirAction, Frame>
     {
         public static FrameSet Player;
-        public static FrameSet DefaultNPC, DefaultMonster, RedFaeFlower;
+        public static FrameSet DefaultNPC, DefaultMonster, RedFaeFlower, Manticore;
         public static List<FrameSet> DragonStatue, GreatFoxSpirit, HellBomb, CaveStatue;
 
         static FrameSet()
@@ -49,6 +49,18 @@ namespace Client.MirObjects
                 { MirAction.Die, new Frame(392, 9, 0, 100) },
                 { MirAction.Dead, new Frame(400, 1, 8, 1000) },
                 { MirAction.Revive, new Frame(392, 9, 0, 100) { Reverse = true } }
+            };
+            Manticore = new FrameSet
+            {
+                { MirAction.Standing, new Frame(0, 4, 0, 300) },
+                { MirAction.Walking, new Frame(112, 8, 0, 100) },
+                { MirAction.Attack1, new Frame(176, 8, 0, 100) },
+                { MirAction.Attack2, new Frame(240, 7, 0, 100) },
+                { MirAction.Attack3, new Frame(296, 7, 0, 100) },
+                { MirAction.Struck, new Frame(352, 3, 0, 200) },
+                { MirAction.Die, new Frame(376, 15, 0, 100) },
+                { MirAction.Dead, new Frame(390, 1, 14, 1000) },
+                { MirAction.Revive, new Frame(376, 15, 0, 100) { Reverse = true } }
             };
 
             #region DragonStatue

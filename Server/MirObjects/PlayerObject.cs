@@ -6431,7 +6431,7 @@ namespace Server.MirObjects
                         successchance *= (int)tempTo.GemCount;
                     }
 
-                    successchance = successchance >= tempFrom.Info.Stats[Stat.CriticalRate] ? 0 : (tempFrom.Info.Stats[Stat.CriticalRate] - successchance) + Stats[Stat.GemRatePercent];
+                    successchance = successchance >= tempFrom.Info.Stats[Stat.CriticalRate] ? 0 : (tempFrom.Info.Stats[Stat.CriticalRate] - successchance) + Stats[Stat.宝玉Percent];
 
                     //check if combine will succeed
                     bool succeeded = Envir.Random.Next(100) < successchance;
@@ -8941,6 +8941,12 @@ namespace Server.MirObjects
                     if (MyGuild.IsAtWar())
                     {
                         ReceiveChat("战争中不能撤回成员.", ChatType.System);
+                        return;
+                    }
+
+                    if(MyGuild.Info.Membercount > MyGuild.Info.MemberCap)
+                    {
+                        ReceiveChat("行会成员已满不能邀请新成员", ChatType.System);
                         return;
                     }
 

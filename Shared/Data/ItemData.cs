@@ -11,7 +11,7 @@ public class ItemInfo
     public ItemType Type;
     public ItemGrade Grade;
     public RequiredType RequiredType = RequiredType.Level;
-    public RequiredClass RequiredClass = RequiredClass.None;
+    public RequiredClass RequiredClass = RequiredClass.全职业;
     public RequiredGender RequiredGender = RequiredGender.None;
     public ItemSet Set;
 

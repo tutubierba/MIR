@@ -1039,7 +1039,8 @@ public enum RequiredClass : byte
     刺客 = 8,
     弓箭手 = 16,
     战法道 = 战士 | 法师 | 道士,
-    None = 战法道 | 刺客 | 弓箭手
+    法弓 = 法师 | 弓箭手,
+    全职业 = 战法道 | 刺客 | 弓箭手
 }
 
 [Flags]
@@ -1180,6 +1181,7 @@ public enum Spell : byte
     EnergyShield = 84,
     PetEnhancer = 85,
     HealingCircle = 86,
+    YYWXZMJ = 88,
 
     //刺客
     FatalSword = 91,

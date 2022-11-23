@@ -832,7 +832,7 @@ namespace Server.Database
             row.Cells["ItemGrade"].Value = (ItemGrade)0;
             row.Cells["ItemRequiredType"].Value = (RequiredType)0;
             row.Cells["ItemRequiredGender"].Value = RequiredGender.None;
-            row.Cells["ItemRequiredClass"].Value = RequiredClass.None;
+            row.Cells["ItemRequiredClass"].Value = RequiredClass.全职业;
             row.Cells["ItemSet"].Value = (ItemSet)0;
             row.Cells["ItemRandomStatsId"].Value = (byte)0;
             row.Cells["ItemRequiredAmount"].Value = (byte)0;

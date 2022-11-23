@@ -52,7 +52,8 @@ namespace Server
              }
              else
              {
-                 tabControl1.Enabled = true;
+                Console.WriteLine(_selectedMagicInfo.ToString());
+                tabControl1.Enabled = true;
                  lblSelected.Text = "Selected Skill: " + _selectedMagicInfo.ToString();
                  lblDamageExample.Text =
                      $"Damage @ Skill level 0: {GetMinPower(0):000}-{GetMaxPower(0):000}   |||   level 1: {GetMinPower(1):000}-{GetMaxPower(1):000}   |||   level 2: {GetMinPower(2):000}-{GetMaxPower(2):000}   |||   level 3: {GetMinPower(3):000}-{GetMaxPower(3):000}";
@@ -78,6 +79,10 @@ namespace Server
                  if (field != 2)
                  txtDmgMultBoost.Text = _selectedMagicInfo.MultiplierBonus.ToString();
                  txtRange.Text = _selectedMagicInfo.Range.ToString();
+                SpellTextBox.Text = ((short)_selectedMagicInfo.Spell).ToString();
+
+                Console.WriteLine(_selectedMagicInfo.Spell);
+                Console.WriteLine((short)_selectedMagicInfo.Spell);
                  ItemInfo Book = Envir.GetBook((short)_selectedMagicInfo.Spell);
                  if (Book != null)
                  {
@@ -161,6 +166,9 @@ namespace Server
             this.label1 = new System.Windows.Forms.Label();
             this.lblBookValid = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.label25 = new System.Windows.Forms.Label();
+            this.SpellTextBox = new System.Windows.Forms.TextBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -192,6 +200,8 @@ namespace Server
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.SpellTextBox);
+            this.tabPage1.Controls.Add(this.label25);
             this.tabPage1.Controls.Add(this.label24);
             this.tabPage1.Controls.Add(this.label23);
             this.tabPage1.Controls.Add(this.textBoxName);
@@ -699,6 +709,23 @@ namespace Server
             this.lblBookValid.TabIndex = 0;
             this.lblBookValid.Text = "Searching for books";
             // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(373, 23);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(41, 12);
+            this.label25.TabIndex = 13;
+            this.label25.Text = "Spell:";
+            // 
+            // SpellTextBox
+            // 
+            this.SpellTextBox.Location = new System.Drawing.Point(420, 18);
+            this.SpellTextBox.Name = "SpellTextBox";
+            this.SpellTextBox.Size = new System.Drawing.Size(100, 21);
+            this.SpellTextBox.TabIndex = 14;
+            this.SpellTextBox.TextChanged += new System.EventHandler(this.SpellTextBox_TextChanged);
+            // 
             // MagicInfoForm
             // 
             this.ClientSize = new System.Drawing.Size(927, 542);
@@ -980,6 +1007,21 @@ namespace Server
             else {
                 ActiveControl.BackColor = SystemColors.Window;              
             }            
+        }
+
+        private void SpellTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (ActiveControl != sender) return;
+            short temp;
+
+            if (!short.TryParse(ActiveControl.Text, out temp))
+            {
+                ActiveControl.BackColor = Color.Red;
+                return;
+            }
+            _selectedMagicInfo.Spell = (Spell)temp;
+            UpdateMagicForm();
+
         }
     }
 }

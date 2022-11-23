@@ -139,7 +139,7 @@ public enum Stat : byte
     ItemDropRatePercent = 101,
     GoldDropRatePercent = 102,
     MineRatePercent = 103,
-    GemRatePercent = 104,
+    宝玉Percent = 104,
     FishRatePercent = 105,
     CraftRatePercent = 106,
     SkillGainMultiplier = 107,

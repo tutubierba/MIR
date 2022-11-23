@@ -1335,6 +1335,7 @@ namespace Server.MirEnvir
                     for (var i = 0; i < count; i++)
                     {
                         var m = new MagicInfo(reader, LoadVersion, LoadCustomVersion);
+                        Console.WriteLine(m.Name + " === " + m.Spell);
                         if (!MagicExists(m.Spell))
                             MagicInfoList.Add(m);
                     }

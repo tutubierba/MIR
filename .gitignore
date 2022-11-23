@@ -51,10 +51,10 @@ Legend of Mir.v12.suo
 /LibraryViewer/obj
 /LibraryEditor/obj
 /LibraryViewer/bin
-/Build
 !/Build/Server/Server.MirADB
-!/Build/Server/Server.DB
+!/Build/Server/Server.MirDB
 !/Build/Server/Server.exe.config
+/Build
 /.vs
 Packages
 Release
