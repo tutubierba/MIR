@@ -109,7 +109,11 @@ namespace Server.MirObjects
         ReviveHero,
         SealHero,
         CreateMapInstance,
+<<<<<<< HEAD
         RemoveMapInstance,
         SETQUEST,
+=======
+        RemoveMapInstance
+>>>>>>> 9a77f39 (副本功能添加)
     }
 }

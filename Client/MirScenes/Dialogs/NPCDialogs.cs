@@ -227,7 +227,11 @@ namespace Client.MirScenes.Dialogs
 
         private void ButtonClicked(string action)
         {
+<<<<<<< HEAD
             //Console.WriteLine(action);
+=======
+            Console.WriteLine(action);
+>>>>>>> 9a77f39 (副本功能添加)
             if (action == "@Exit")
             {
                 Hide();

@@ -228,7 +228,11 @@ namespace Launcher
             this.ProgTotalEnd_pb.BackColor = System.Drawing.Color.Transparent;
             this.ProgTotalEnd_pb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ProgTotalEnd_pb.Image = global::Client.Properties.Resources.NEW_Progress_End__Blue_;
+<<<<<<< HEAD
             this.ProgTotalEnd_pb.Location = new System.Drawing.Point(611, 512);
+=======
+            this.ProgTotalEnd_pb.Location = new System.Drawing.Point(608, 512);
+>>>>>>> 9a77f39 (副本功能添加)
             this.ProgTotalEnd_pb.Name = "ProgTotalEnd_pb";
             this.ProgTotalEnd_pb.Size = new System.Drawing.Size(4, 14);
             this.ProgTotalEnd_pb.TabIndex = 26;
