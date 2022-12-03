@@ -9,7 +9,7 @@ using S = ServerPackets;
 
 namespace Server.MirEnvir
 {
-    public class Map
+    public class Map:IDisposable
     {
         private static Envir Envir
         {
@@ -24,7 +24,6 @@ namespace Server.MirEnvir
         public MapInfo Info;
 
         public int Thread = 0;
-
         public int Width, Height;
         public Cell[,] Cells;
         public List<Point> WalkableCells;
@@ -33,6 +32,9 @@ namespace Server.MirEnvir
         public MineSpot[,] Mine;
         public long LightningTime, FireTime;
         public int MonsterCount;
+        public string InstanceName = null;
+        public string MapClass;
+        public LinkedList<MapObject> MapObjects = new LinkedList<MapObject>();
 
         public List<NPCObject> NPCs = new List<NPCObject>();
         public List<SpellObject> Spells = new List<SpellObject>();
@@ -44,10 +46,19 @@ namespace Server.MirEnvir
         public List<ConquestObject> Conquest = new List<ConquestObject>();
         public ConquestObject tempConquest;
 
+        public List<MapRespawn> SavedInstanceSpawns = new List<MapRespawn>();
+
         public Map(MapInfo info)
         {
             Info = info;
             Thread = Envir.Random.Next(Settings.ThreadLimit);
+        }
+
+        public Map(MapInfo info, String InstancePlayerName)
+        {
+            Info = info;
+            Thread = Envir.Random.Next(Settings.ThreadLimit);
+            InstanceName = InstancePlayerName;
         }
 
         public Door AddDoor(byte DoorIndex, Point location)
@@ -71,6 +82,31 @@ namespace Server.MirEnvir
                     return true;
                 }
             return false;
+        }
+
+
+
+        public void DC()
+        {
+            LinkedListNode<MapObject> current = MapObjects.First;
+            bool TheEnd = false;
+            while (!TheEnd)
+            {
+                if(current == null)
+                {
+                    TheEnd = true;
+                    break;
+                }
+                var next = current.Next;
+                current.Value.InstanceM = 2;
+                current = next;
+            }
+            for(int i = 0; i < NPCs.Count; i ++)
+            {
+                NPCs[i].Despawn();
+            }
+            Dispose();
+
         }
 
         private byte FindType(byte[] input)
@@ -472,7 +508,6 @@ namespace Server.MirEnvir
                     }
 
                     GetWalkableCells();
-                    
                     for (int i = 0; i < Info.Respawns.Count; i++)
                     {
                         MapRespawn info = new MapRespawn(Info.Respawns[i]);
@@ -487,7 +522,11 @@ namespace Server.MirEnvir
                         Respawns.Add(info);
 
                         if ((info.Info.SaveRespawnTime) && (info.Info.RespawnTicks != 0))
+                        {
                             Envir.SavedSpawns.Add(info);
+
+                        }
+
                     }
 
                     for (int i = 0; i < Info.NPCs.Count; i++)
@@ -2332,6 +2371,11 @@ namespace Server.MirEnvir
                 Player.Enqueue(p);
             }    
         }
+
+        public void Dispose()
+        {
+            GC.SuppressFinalize(this);
+        }
     }
     public class Cell
     {
@@ -2387,6 +2431,10 @@ namespace Server.MirEnvir
         public bool Spawn()
         {
             MonsterObject ob = MonsterObject.GetMonster(Monster);
+            if (Map.InstanceName != null)
+            {
+                ob.InstanceM = 1;
+            }
             if (ob == null) return true;
             return ob.Spawn(this);
         }

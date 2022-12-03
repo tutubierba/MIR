@@ -66,6 +66,7 @@ namespace Server.MirObjects
             LoadScript();
         }
 
+
         private void LoadScript()
         {
             var script = NPCScript.GetOrAdd(ObjectID, Info.FileName, NPCScriptType.Normal);

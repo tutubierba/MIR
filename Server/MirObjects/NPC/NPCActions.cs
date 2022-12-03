@@ -107,6 +107,8 @@ namespace Server.MirObjects
         RollYut,
         Drop,
         ReviveHero,
-        SealHero
+        SealHero,
+        CreateMapInstance,
+        RemoveMapInstance
     }
 }

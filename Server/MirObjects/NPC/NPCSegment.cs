@@ -101,10 +101,10 @@ namespace Server.MirObjects
 
         public void ParseCheck(string line)
         {
+            //  line = "LEVEL > 65"
             var parts = line.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-
+            //  parts.length = 3    line[0] = LEVEL   line[1] = >   Line[2] = 65
             parts = ParseArguments(parts);
-
             if (parts.Length == 0) return;
 
             string tempString, tempString2;
@@ -113,9 +113,12 @@ namespace Server.MirObjects
             var regexQuote = new Regex("\"([^\"]*)\"");
 
             Match quoteMatch;
-
             switch (parts[0].ToUpper())
             {
+
+                case "CHECKINSTANCE":
+                    CheckList.Add(new NPCChecks(CheckType.CheckInstance));
+                    break;
                 case "LEVEL":
                     if (parts.Length < 3) return;
 
@@ -385,7 +388,7 @@ namespace Server.MirObjects
                     CheckList.Add(new NPCChecks(CheckType.CheckTimer, parts[1], parts[2], parts[3]));
                     break;
             }
-
+            
         }
         public void ParseAct(List<NPCActions> acts, string line)
         {
@@ -400,9 +403,17 @@ namespace Server.MirObjects
             var regexFlag = new Regex(@"\[(.*?)\]");
 
             Match quoteMatch = null;
-
             switch (parts[0].ToUpper())
             {
+
+
+                case "CREATEMAPINSTANCE":
+                    if (parts.Length < 4) return;
+                    acts.Add(new NPCActions(ActionType.CreateMapInstance, parts[1],parts[2],parts[3], parts[4]));
+                    break;
+                case "REMOVEINSTANCE":
+                    acts.Add(new NPCActions(ActionType.RemoveMapInstance, parts[1]));
+                    break;
                 case "MOVE":
                     if (parts.Length < 2) return;
 
@@ -413,9 +424,9 @@ namespace Server.MirObjects
                     break;
 
                 case "INSTANCEMOVE":
-                    if (parts.Length < 5) return;
+                    if (parts.Length < 3) return;
 
-                    acts.Add(new NPCActions(ActionType.InstanceMove, parts[1], parts[2], parts[3], parts[4]));
+                    acts.Add(new NPCActions(ActionType.InstanceMove, parts[1], parts[2], parts[3]));
                     break;
 
                 case "GIVEGOLD":
@@ -1876,6 +1887,21 @@ namespace Server.MirObjects
             return true;
 
         }
+
+
+        public bool CheckInstanceHave(PlayerObject player)
+        {
+            for(int i = 0; i < Envir.InstanceMapList.Count; i ++)
+            {
+                if(Envir.InstanceMapList[i].InstanceName == player.Name)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+
         public bool Check(PlayerObject player)
         {
             var failed = false;
@@ -1903,6 +1929,21 @@ namespace Server.MirObjects
 
                 switch (check.Type)
                 {
+                    case CheckType.CheckInstance:
+                        if(player.GroupMembers == null)
+                        {
+                            failed = CheckInstanceHave(player);
+                            MessageQueue.Enqueue(player.Name + "没有组队可以创建副本");
+                            
+                        }else if(player.GroupMembers[0].Name == player.Name)
+                        {
+                            MessageQueue.Enqueue(player.Name + "组队中队长可以创建副本");
+                        }
+                        else
+                        {
+                            MessageQueue.Enqueue(player.Name + "队员无法创建副本");
+                        }
+                        break;
                     case CheckType.Level:
                         {
                             if (!ushort.TryParse(param[1], out ushort level))
@@ -2163,13 +2204,21 @@ namespace Server.MirObjects
                         break;
 
                     case CheckType.CheckMon:
+
                         if (!int.TryParse(param[1], out tempInt) || !int.TryParse(param[3], out tempInt2))
                         {
                             failed = true;
                             break;
                         }
+                        if (player.CurrentMap.InstanceName != null)
+                        {
+                            map = Envir.GetMapByNameAndInstanceM(param[2], player.CurrentMap.InstanceName,tempInt2);
+                        }
+                        else
+                        {
+                            map = Envir.GetMapByNameAndInstance(param[2], tempInt2);
+                        }
 
-                        map = Envir.GetMapByNameAndInstance(param[2], tempInt2);
                         if (map == null)
                         {
                             failed = true;
@@ -2773,6 +2822,11 @@ namespace Server.MirObjects
 
                 switch (act.Type)
                 {
+
+                    case ActionType.CreateMapInstance:
+                        Envir.CreateInstanceMap(param[0], player.Name,param[3]);
+                        break;
+
                     case ActionType.Move:
                         {
                             Map map = Envir.GetMapByNameAndInstance(param[0]);
@@ -2788,17 +2842,49 @@ namespace Server.MirObjects
                         }
                         break;
 
+                    case ActionType.RemoveMapInstance:
+                        Envir.RemoveInstanceMap(param[0],player.Name);
+                        break;
                     case ActionType.InstanceMove:
                         {
-                            if (!int.TryParse(param[1], out int instanceId)) return;
-                            if (!int.TryParse(param[2], out int x)) return;
-                            if (!int.TryParse(param[3], out int y)) return;
+                            Console.WriteLine(param[0]);
+                            if (!int.TryParse(param[1], out int x)) return;
+                            if (!int.TryParse(param[2], out int y)) return;
+                            string name;
+                            Map mapa = null;
+                            if (player.GroupMembers == null)
+                            {
+                                name = player.Name;
+                            }
+                            else
+                            {
+                                name = player.GroupMembers[0].Name;
+                            }
 
-                            var map = Envir.GetMapByNameAndInstance(param[0], instanceId);
-                            if (map == null) return;
-                            player.Teleport(map, new Point(x, y));
+                            for(int k = 0; k < Envir.InstanceMapList.Count; k++)
+                            {
+                                if(Envir.InstanceMapList[k].InstanceName == name && Envir.InstanceMapList[k].Info.FileName == param[0])
+                                {
+                                    mapa = Envir.InstanceMapList[k];
+                                    if (mapa == null) return;
+                                    player.Teleport(mapa, new Point(x, y));
+                                    return;
+                                }
+                            }
                         }
                         break;
+
+                    //case ActionType.InstanceMove:
+                    //    {
+                    //        if (!int.TryParse(param[1], out int instanceId)) return;
+                    //        if (!int.TryParse(param[2], out int x)) return;
+                    //        if (!int.TryParse(param[3], out int y)) return;
+
+                    //        var map = Envir.GetMapByNameAndInstance(param[0], instanceId);
+                    //        if (map == null) return;
+                    //        player.Teleport(map, new Point(x, y));
+                    //    }
+                    //    break;
 
                     case ActionType.GiveGold:
                         {

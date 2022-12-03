@@ -133,6 +133,7 @@ namespace Server.MirEnvir
         //Live Info
         public bool Saving = false;
         public List<Map> MapList = new List<Map>();
+        public List<Map> InstanceMapList = new List<Map>();
         public List<SafeZoneInfo> StartPoints = new List<SafeZoneInfo>();
         public List<ItemInfo> StartItems = new List<ItemInfo>();
 
@@ -184,6 +185,7 @@ namespace Server.MirEnvir
         public static int LastCount = 0, LastRealCount = 0;
         public static long LastRunTime = 0;
         public int MonsterCount;
+        public int InstanceMonsterCount;
 
         private long warTime, guildTime, conquestTime, rentalItemsTime, auctionTime, spawnTime, robotTime, timerTime;
         private int dailyTime = DateTime.UtcNow.Day;
@@ -566,9 +568,11 @@ namespace Server.MirEnvir
                             }
                         }
 
-
                         if (current == null)
+                        {
                             current = Objects.First;
+                        }
+
 
                         if (current == Objects.First)
                         {
@@ -598,10 +602,22 @@ namespace Server.MirEnvir
                         var Start = Stopwatch.ElapsedMilliseconds;
                         while (!TheEnd && Stopwatch.ElapsedMilliseconds - Start < 20)
                         {
+
                             if (current == null)
                             {
                                 TheEnd = true;
                                 break;
+                            }
+                            else if(current.Value.InstanceM == 2)
+                            {
+                                var locNext = current.Next;
+                                current.Value.Despawn();
+                                current = locNext;
+                                if (locNext == null)
+                                {
+                                    TheEnd = true;
+                                    break;
+                                }
                             }
 
                             var next = current.Next;
@@ -619,6 +635,8 @@ namespace Server.MirEnvir
 
                         for (var i = 0; i < MapList.Count; i++)
                             MapList[i].Process();
+                        for (var i = 0; i < InstanceMapList.Count; i++)
+                            InstanceMapList[i].Process();
 
                         DragonSystem?.Process();
 
@@ -2766,6 +2784,12 @@ namespace Server.MirEnvir
             return MapList.FirstOrDefault(t => t.Info.Index == index);
         }
 
+        public Map GetInstanceMap(int index, string Pname)
+        {
+            return InstanceMapList.FirstOrDefault(t => t.Info.Index == index && t.InstanceName == Pname);
+        }
+
+
         public Map GetMap(string name, bool strict = true)
         {
             return MapList.FirstOrDefault(t => strict ? string.Equals(t.Info.Title, name, StringComparison.CurrentCultureIgnoreCase) : t.Info.Title.StartsWith(name, StringComparison.CurrentCultureIgnoreCase));
@@ -2789,6 +2813,16 @@ namespace Server.MirEnvir
             var instanceMapList = MapList.Where(t => string.Equals(t.Info.FileName, name, StringComparison.CurrentCultureIgnoreCase)).ToList();
             return instanceValue < instanceMapList.Count() ? instanceMapList[instanceValue] : null;
         }
+
+        public Map GetMapByNameAndInstanceM(string name, string insName, int instanceValue = 0)
+        {
+            if (instanceValue < 0) instanceValue = 0;
+            if (instanceValue > 0) instanceValue--;
+
+            var instanceMapList = InstanceMapList.Where(t => string.Equals(t.Info.FileName, name, StringComparison.CurrentCultureIgnoreCase) && t.InstanceName == insName).ToList();
+            return instanceValue < instanceMapList.Count() ? instanceMapList[instanceValue] : null;
+        }
+
 
         public MonsterInfo GetMonsterInfo(int index)
         {
@@ -3538,6 +3572,29 @@ namespace Server.MirEnvir
                     return wmi;
             }
             return null;
+        }
+
+
+        public void CreateInstanceMap(string mapid,string playerName,string MapClass)
+        {
+            for(int i = 0; i < MapInfoList.Count; i++)
+            {
+                if(MapInfoList[i].FileName == mapid)
+                {
+                    MapInfoList[i].CreateInstanceMap(playerName,MapClass);
+                }
+            }
+        }
+
+        public void RemoveInstanceMap(string mapclass, string playerName)
+        {
+            List<Map> maps = InstanceMapList.FindAll(x => x.InstanceName == playerName);
+            for(int i = 0; i < maps.Count; i ++)
+            {
+                maps[i].DC();
+            }
+            InstanceMapList.RemoveAll(x => x.InstanceName == playerName);
+            GC.Collect();
         }
     }
 }
