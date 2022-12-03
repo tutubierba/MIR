@@ -2170,7 +2170,7 @@ namespace Server.MirObjects
                         player.RefreshStats();
                         break;
 
-                    case "SUPERMAN":
+                    case "WUDI":
                         if (!IsGM && !Settings.TestServer) return;
 
                         GMNeverDie = !GMNeverDie;
@@ -2180,7 +2180,7 @@ namespace Server.MirObjects
                         UpdateGMBuff();
                         break;
 
-                    case "GAMEMASTER":
+                    case "GM":
                         if (!IsGM && !Settings.TestServer) return;
 
                         GMGameMaster = !GMGameMaster;
@@ -2821,7 +2821,7 @@ namespace Server.MirObjects
                             count = uint.MaxValue - player.Account.Credit;
 
                         player.GainCredit(count);
-                        MessageQueue.Enqueue(string.Format("玩家{0}已获得{1}学分", player.Name, count));
+                        MessageQueue.Enqueue(string.Format("玩家{0}已获得{1}积分", player.Name, count));
                         break;
                     case "GIVESKILL":
                         if ((!IsGM && !Settings.TestServer) || parts.Length < 3) return;
@@ -2855,7 +2855,7 @@ namespace Server.MirObjects
                         if (player.Info.Magics.Any(e => e.Spell == skill))
                         {
                             player.Info.Magics.FirstOrDefault(e => e.Spell == skill).Level = spellLevel;
-                            player.ReceiveChat(string.Format("拼写{0}已更改为级别{1}", skill.ToString(), spellLevel), ChatType.Hint);
+                            player.ReceiveChat(string.Format("技能{0}已更改为级别{1}", skill.ToString(), spellLevel), ChatType.Hint);
                             return;
                         }
                         else

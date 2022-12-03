@@ -48,18 +48,18 @@ namespace Server
         {
             if ((ITypeComboBox.SelectedItem != null) && ((ItemType)ITypeComboBox.SelectedItem == ItemType.Gem))
             {
-                tabControl1.TabPages[3].Text = "Usable on";
-                ParalysischeckBox.Text = "Weapon";
-                TeleportcheckBox.Text = "Armour";
-                ClearcheckBox.Text = "Helmet";
-                ProtectioncheckBox.Text = "Necklace";
-                RevivalcheckBox.Text = "Bracelet";
-                MusclecheckBox.Text = "Ring";
-                FlamecheckBox.Text = "Amulet";
-                HealingcheckBox.Text = "Belt";
-                ProbecheckBox.Text = "Boots";
-                SkillcheckBox.Text = "Stone";
-                NoDuraLosscheckBox.Text = "Torch";
+                tabControl1.TabPages[3].Text = "适用于";
+                ParalysischeckBox.Text = "武器";
+                TeleportcheckBox.Text = "盔甲";
+                ClearcheckBox.Text = "头盔";
+                ProtectioncheckBox.Text = "项链";
+                RevivalcheckBox.Text = "手镯";
+                MusclecheckBox.Text = "戒指";
+                FlamecheckBox.Text = "护身符";
+                HealingcheckBox.Text = "腰带";
+                ProbecheckBox.Text = "靴子";
+                SkillcheckBox.Text = "守护石";
+                NoDuraLosscheckBox.Text = "照明";
                 PickaxecheckBox.Text = "Unused";
                 label50.Text = "Base rate%";
                 label52.Text = "Success drop";

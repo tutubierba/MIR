@@ -7844,7 +7844,7 @@ namespace Client.MirScenes
                         OutLine = true,
                         Parent = ItemLabel,
                         //Text = string.Format(realItem.Type == ItemType.Potion ? "HP + {0} Recovery" : "MAXHP + {0}", minValue + addValue)
-                        Text = string.Format(addValue > 0 ? "生命上限：+{0} (+{1})" : "生命上限：+{0}", minValue + addValue, addValue)
+                        Text = string.Format(addValue > 0 ? "生命上限：+{0} (+{1})" : "生命：+{0}", minValue + addValue, addValue)
                     };
 
                     ItemLabel.Size = new Size(Math.Max(ItemLabel.Size.Width, MAXHPLabel.DisplayRectangle.Right + 4),
@@ -7871,7 +7871,7 @@ namespace Client.MirScenes
                     OutLine = true,
                     Parent = ItemLabel,
                     //Text = string.Format(realItem.Type == ItemType.Potion ? "MP + {0} Recovery" : "MAXMP + {0}", minValue + addValue)
-                    Text = string.Format(addValue > 0 ? "魔法上限：+{0} (+{1})" : "魔法上限：+{0}", minValue + addValue, addValue)
+                    Text = string.Format(addValue > 0 ? "魔法上限：+{0} (+{1})" : "魔法：+{0}", minValue + addValue, addValue)
                 };
 
                 ItemLabel.Size = new Size(Math.Max(ItemLabel.Size.Width, MAXMPLabel.DisplayRectangle.Right + 4),
