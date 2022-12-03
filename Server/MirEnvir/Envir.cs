@@ -1825,7 +1825,7 @@ namespace Server.MirEnvir
             }
 
             MessageQueue.Enqueue("网络服务已加载.");
-            MessageQueue.Enqueue("引擎版本：R.O.C 110 10.18");
+            MessageQueue.Enqueue("引擎版本：R.O.C 110 12.08");
             MessageQueue.Enqueue("程序汉化QQ：1052897215");
             MessageQueue.Enqueue("QQ交流群：607440294");
         }

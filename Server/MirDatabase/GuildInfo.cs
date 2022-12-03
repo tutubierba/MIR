@@ -44,7 +44,7 @@ namespace Server.MirDatabase
         {
             Name = name;
 
-            var ownerRank = new GuildRank { Name = "Leader", Options = (GuildRankOptions)255, Index = 0 };
+            var ownerRank = new GuildRank { Name = "行会掌门人", Options = (GuildRankOptions)255, Index = 0 };
             var leader = new GuildMember { Name = owner.Info.Name, Player = owner, Id = owner.Info.Index, LastLogin = Envir.Now, Online = true };
 
             ownerRank.Members.Add(leader);

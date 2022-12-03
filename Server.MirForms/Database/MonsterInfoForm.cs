@@ -53,18 +53,24 @@ namespace Server
         }
         private void ShowImgs()
         {
-            while (true)
+            bool ShowImage = true;
+            while (ShowImage)
             {
                 if (aa != -1)
                 {
                     int loca = aa;
+                    if (!File.Exists(Path.GetFullPath("../Build/Client/Data/Monster/" + BINT(loca))))
+                    {
+                        ShowImage = false;
+                        return;
+                    }
                     if (loca < 10000)
                     {
-                        fileName = Path.GetFullPath("../../Build/Client/Data/Monster/" + BINT(loca));
+                        fileName = Path.GetFullPath("../Build/Client/Data/Monster/" + BINT(loca));
                     }
                     else
                     {
-                        fileName = Path.GetFullPath("../../Build/Client/Data/Pet/" + BPINT(loca));
+                        fileName = Path.GetFullPath("../Build/Client/Data/Pet/" + BPINT(loca));
                     }
                     _testmy = new MLibraryV2(fileName);
                     if (_testmy.Images.Count == 0)
@@ -99,8 +105,8 @@ namespace Server
         {
             InitializeComponent();
 
-            th = new Thread(ShowImgs);
-            th.Start();
+            //th = new Thread(ShowImgs);
+            //th.Start();
 
             ImageComboBox.Items.AddRange(Enum.GetValues(typeof(Monster)).Cast<object>().ToArray());
             UpdateInterface();

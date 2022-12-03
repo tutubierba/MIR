@@ -171,6 +171,7 @@ namespace Server.MirObjects.Monsters
             }
         }
 
+
         private void SpawnSlaves()
         {
             List<MapObject> targets = FindAllTargets(10, CurrentLocation);
