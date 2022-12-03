@@ -10,6 +10,7 @@ Desktop.ini
 *.msi
 *.msm
 *.msp
+.MirADB
 
 # Windows Shortcuts
 *.lnk
@@ -51,10 +52,9 @@ Legend of Mir.v12.suo
 /LibraryViewer/obj
 /LibraryEditor/obj
 /LibraryViewer/bin
-!/Build/Server/Server.MirADB
-!/Build/Server/Server.MirDB
-!/Build/Server/Server.exe.config
-/Build
+/Build/*
+
+!/Build/Server/
 /.vs
 Packages
 Release
@@ -69,3 +69,19 @@ obj
 /Components/CustoMFormControl.pdb
 Components/CustomFormControl.dll
 Components/CustomFormControl.pdb
+/Build/Server/Back Up
+/Build/Server/Configs
+/Build/Server/Conquests
+/Build/Server/Guilds
+/Build/Server/Logs
+/Build/Server/netstandard2.0
+*.dll
+/Build/Server/System.Drawing.Common.xml
+/Build/Server/Shared.pdb
+/Build/Server/Server.rar
+/Build/Server/Server.exe
+/Build/Server/Microsoft.VisualBasic.PowerPacks.Vs.xml
+/Build/Server/log4net.xml
+/Build/Server/Envir.rar
+/Build/Server/CustomFormControl.pdb
+/Build/Server/Envir
