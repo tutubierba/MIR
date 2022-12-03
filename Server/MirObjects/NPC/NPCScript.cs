@@ -146,14 +146,11 @@ namespace Server.MirObjects
             if (!Directory.Exists(Settings.NPCPath)) return;
 
             string fileName = Path.Combine(Settings.NPCPath, FileName + ".txt");
-
             if (File.Exists(fileName))
             {
                 List<string> lines = File.ReadAllLines(fileName).ToList();
-
                 lines = ParseInsert(lines);
                 lines = ParseInclude(lines);
-
                 switch (Type)
                 {
                     case NPCScriptType.Normal:
@@ -418,6 +415,12 @@ namespace Server.MirObjects
             return pages;
         }
 
+        /// <summary>
+        /// 解析页面
+        /// </summary>
+        /// <param name="scriptLines"></param>
+        /// <param name="页面命令名称"></param>
+        /// <returns></returns>
         private NPCPage ParsePage(IList<string> scriptLines, string sectionName)
         {
             bool nextPage = false, nextSection = false;

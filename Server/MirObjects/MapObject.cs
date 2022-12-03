@@ -45,6 +45,11 @@ namespace Server.MirObjects
             get { return _currentMap; }
         }
 
+        public string InstanceName
+        {
+            get { return _currentMap.InstanceName; }
+        }
+
         public abstract int CurrentMapIndex { get; set; }
         public abstract Point CurrentLocation { get; set; }
         public abstract MirDirection Direction { get; set; }
@@ -57,7 +62,9 @@ namespace Server.MirObjects
         {
             get { return (byte)(Health / (float)MaxHealth * 100); }
         }
-
+        
+        ///0 normal    1 instance     2 remove
+        public byte InstanceM = 0;
         public byte Light;
         public int AttackSpeed;
 
@@ -344,6 +351,11 @@ namespace Server.MirObjects
 
         public virtual void Spawned()
         {
+
+            if (InstanceM == 1)
+            {
+                Node = CurrentMap.MapObjects.AddLast(this);
+            }
             Node = Envir.Objects.AddLast(this);
             if ((Race == ObjectType.Monster) && Settings.Multithreaded)
             {
@@ -911,6 +923,11 @@ namespace Server.MirObjects
         }
 
         public abstract void SendHealth(HumanObject player);
+
+        public void Dispose()
+        {
+            GC.SuppressFinalize(this);
+        }
 
         public bool InTrapRock
         {

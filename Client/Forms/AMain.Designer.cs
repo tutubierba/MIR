@@ -226,7 +226,7 @@ namespace Launcher
             this.ProgTotalEnd_pb.BackColor = System.Drawing.Color.Transparent;
             this.ProgTotalEnd_pb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ProgTotalEnd_pb.Image = global::Client.Properties.Resources.NEW_Progress_End__Blue_;
-            this.ProgTotalEnd_pb.Location = new System.Drawing.Point(611, 517);
+            this.ProgTotalEnd_pb.Location = new System.Drawing.Point(608, 512);
             this.ProgTotalEnd_pb.Name = "ProgTotalEnd_pb";
             this.ProgTotalEnd_pb.Size = new System.Drawing.Size(4, 14);
             this.ProgTotalEnd_pb.TabIndex = 26;
@@ -238,7 +238,7 @@ namespace Launcher
             this.ProgEnd_pb.BackColor = System.Drawing.Color.Transparent;
             this.ProgEnd_pb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ProgEnd_pb.Image = global::Client.Properties.Resources.NEW_Progress_End__Green_;
-            this.ProgEnd_pb.Location = new System.Drawing.Point(611, 497);
+            this.ProgEnd_pb.Location = new System.Drawing.Point(611, 492);
             this.ProgEnd_pb.Name = "ProgEnd_pb";
             this.ProgEnd_pb.Size = new System.Drawing.Size(4, 14);
             this.ProgEnd_pb.TabIndex = 25;
@@ -259,7 +259,6 @@ namespace Launcher
             // 
             // TotalProg_pb
             // 
-            this.TotalProg_pb.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TotalProg_pb.BackColor = System.Drawing.Color.Transparent;
             this.TotalProg_pb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.TotalProg_pb.Image = global::Client.Properties.Resources.Blue_Progress;

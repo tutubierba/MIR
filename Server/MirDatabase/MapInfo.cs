@@ -47,6 +47,7 @@ namespace Server.MirDatabase
         {
             Index = reader.ReadInt32();
             FileName = reader.ReadString();
+            Console.WriteLine(FileName);
             Title = reader.ReadString();
             MiniMap = reader.ReadUInt16();
             Light = (LightSetting) reader.ReadByte();
@@ -163,8 +164,9 @@ namespace Server.MirDatabase
 
                 NPCs.Add(Envir.NPCInfoList[j]);
             }
-
             Map map = new Map(this);
+
+            
 
             if (!map.Load()) return;
 
@@ -173,6 +175,23 @@ namespace Server.MirDatabase
             for (int i = 0; i < SafeZones.Count; i++)
                 if (SafeZones[i].StartPoint)
                     Envir.StartPoints.Add(SafeZones[i]);
+        }
+
+        public void CreateInstanceMap(string PlayerName, string mapclass)
+        {
+            //for (int j = 0; j < Envir.NPCInfoList.Count; j++)
+            //{
+            //    if (Envir.NPCInfoList[j].MapIndex != Index) continue;
+
+            //    NPCs.Add(Envir.NPCInfoList[j]);
+            //}
+            Map map = new Map(this);
+            map.InstanceName = PlayerName;
+            map.MapClass = mapclass;
+
+            if (!map.Load()) return;
+
+            Envir.InstanceMapList.Add(map);
         }
 
         public void CreateSafeZone()

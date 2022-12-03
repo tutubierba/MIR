@@ -4105,7 +4105,26 @@ namespace Server.MirObjects
                     continue;
                 }
 
-                Map temp = Envir.GetMap(info.MapIndex);
+                Map temp;
+
+                if (CurrentMap.InstanceName != null)
+                {
+                    //传递副本姓名
+                    string Pname;
+                    if (this.GroupMembers == null)
+                    {
+                        Pname = this.Name;
+                    }
+                    else
+                    {
+                        Pname = this.GroupMembers[0].Name;
+                    }
+                    temp = Envir.GetInstanceMap(info.MapIndex , Pname);
+                }
+                else
+                {
+                    temp = Envir.GetMap(info.MapIndex);
+                }
 
                 if (temp == null || !temp.ValidPoint(info.Destination)) continue;
 

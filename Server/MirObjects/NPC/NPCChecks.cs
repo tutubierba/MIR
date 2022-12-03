@@ -62,6 +62,7 @@ namespace Server.MirObjects
         ConquestAvailable,
         ConquestOwner,
         CheckGuildNameList,
-        CheckTimer
+        CheckTimer,
+        CheckInstance
     }
 }

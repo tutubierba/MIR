@@ -652,7 +652,6 @@ namespace Server.MirObjects
         public bool Spawn(MapRespawn respawn)
         {
             Respawn = respawn;
-
             if (Respawn.Map == null) return false;
             if (Respawn.WalkableCells == null || Respawn.WalkableCells.Count == 0) return false;
 

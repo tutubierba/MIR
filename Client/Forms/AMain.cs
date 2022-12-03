@@ -498,7 +498,7 @@ namespace Launcher
 
         private void ProgressCurrent_pb_SizeChanged(object sender, EventArgs e)
         {
-            ProgEnd_pb.Location = new Point((ProgressCurrent_pb.Location.X + ProgressCurrent_pb.Width), 490);
+            ProgEnd_pb.Location = new Point((ProgressCurrent_pb.Location.X + ProgressCurrent_pb.Width), ProgEnd_pb.Location.Y);
             if (ProgressCurrent_pb.Width == 0) ProgEnd_pb.Visible = false;
             else ProgEnd_pb.Visible = true;
         }
@@ -532,7 +532,7 @@ namespace Launcher
 
         private void TotalProg_pb_SizeChanged(object sender, EventArgs e)
         {
-            ProgTotalEnd_pb.Location = new Point((TotalProg_pb.Location.X + TotalProg_pb.Width), 508);
+            ProgTotalEnd_pb.Location = new Point((TotalProg_pb.Location.X + TotalProg_pb.Width), ProgTotalEnd_pb.Location.Y);
             if (TotalProg_pb.Width == 0) ProgTotalEnd_pb.Visible = false;
             else ProgTotalEnd_pb.Visible = true;
         }

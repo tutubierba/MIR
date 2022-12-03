@@ -127,7 +127,11 @@ namespace Server.MirObjects.Monsters
             MapObject target = (MapObject)data[0];
             int damage = (int)data[1];
             DefenceType defence = (DefenceType)data[2];
-            bool fireCircle = (bool)data[3];
+            bool fireCircle = false;
+            if (data.Count == 4)
+            {
+                fireCircle = (bool)data[3];
+            }
 
             if (target == null || !target.IsAttackTarget(this) || target.CurrentMap != CurrentMap || target.Node == null) return;
 
