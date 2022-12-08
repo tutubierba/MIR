@@ -44,7 +44,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\Build\Client\</OutputPath>
+    <OutputPath>..\..\..\..\kehu\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>1</WarningLevel>
@@ -306,6 +306,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MIR2.ICO" />
+    <None Include="Resources\windows2.png" />
+    <None Include="Resources\windows2.jpg" />
     <None Include="Resources\790.jpg" />
     <None Include="Resources\QQ截图20221027160346.png" />
     <None Include="Resources\791.jpg" />

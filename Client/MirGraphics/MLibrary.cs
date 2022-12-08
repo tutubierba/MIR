@@ -528,10 +528,10 @@ namespace Client.MirGraphics
                     _fStream.Seek(frameSeek, SeekOrigin.Begin);
 
                     var frameCount = _reader.ReadInt32();
-
                     if (frameCount > 0)
                     {
                         _frames = new FrameSet();
+                        
                         for (int i = 0; i < frameCount; i++)
                         {
                             _frames.Add((MirAction)_reader.ReadByte(), new Frame(_reader));

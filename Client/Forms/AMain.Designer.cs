@@ -58,6 +58,7 @@ namespace Launcher
             this.Launch_pb = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Version_label = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.Movement_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Config_pb)).BeginInit();
@@ -68,6 +69,7 @@ namespace Launcher
             ((System.ComponentModel.ISupportInitialize)(this.TotalProg_pb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Launch_pb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // ActionLabel
@@ -259,7 +261,6 @@ namespace Launcher
             // 
             // TotalProg_pb
             // 
-            this.TotalProg_pb.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TotalProg_pb.BackColor = System.Drawing.Color.Transparent;
             this.TotalProg_pb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.TotalProg_pb.Image = global::Client.Properties.Resources.Blue_Progress;
@@ -290,7 +291,7 @@ namespace Launcher
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::Client.Properties.Resources._790;
+            this.pictureBox2.Image = global::Client.Properties.Resources._79;
             this.pictureBox2.Location = new System.Drawing.Point(12, 46);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(782, 422);
@@ -302,13 +303,22 @@ namespace Launcher
             this.Version_label.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Version_label.BackColor = System.Drawing.Color.Transparent;
             this.Version_label.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Version_label.ForeColor = System.Drawing.Color.Transparent;
-            this.Version_label.Location = new System.Drawing.Point(574, 530);
+            this.Version_label.ForeColor = System.Drawing.Color.SandyBrown;
+            this.Version_label.Location = new System.Drawing.Point(246, 529);
             this.Version_label.Name = "Version_label";
-            this.Version_label.Size = new System.Drawing.Size(210, 20);
+            this.Version_label.Size = new System.Drawing.Size(251, 20);
             this.Version_label.TabIndex = 31;
             this.Version_label.Text = "卓越传奇，不忘初心";
             this.Version_label.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Client.Properties.Resources.windows1;
+            this.pictureBox3.Location = new System.Drawing.Point(12, 437);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(96, 31);
+            this.pictureBox3.TabIndex = 33;
+            this.pictureBox3.TabStop = false;
             // 
             // AMain
             // 
@@ -318,6 +328,7 @@ namespace Launcher
             this.BackgroundImage = global::Client.Properties.Resources.pfffft;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(806, 558);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.SpeedLabel);
             this.Controls.Add(this.Version_label);
@@ -354,6 +365,7 @@ namespace Launcher
             ((System.ComponentModel.ISupportInitialize)(this.TotalProg_pb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Launch_pb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -377,6 +389,7 @@ namespace Launcher
         private System.Windows.Forms.PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private Label Version_label;
+        private PictureBox pictureBox3;
     }
 }
 

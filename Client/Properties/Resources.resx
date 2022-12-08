@@ -175,6 +175,9 @@
   <data name="Launch_Pressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Launch_Pressed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="790" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\790.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Config_Pressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Config_Pressed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -202,7 +205,10 @@
   <data name="pfffft" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pfffft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="790" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\790.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="windows" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\windows2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="windows1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\windows2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

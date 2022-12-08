@@ -264,10 +264,1361 @@ namespace Client.MirObjects
                     break;
                 case Monster.RedFaeFlower:
                     Frames = FrameSet.RedFaeFlower;
+                    break; 
+                case Monster.Sqmoth:
+                    Frames = FrameSet.Sqmoth;
+                    break;
+                case Monster.SqAlizard:
+                    Frames = FrameSet.SqAlizard;
+                    break;
+                case Monster.Sqmouse:
+                    Frames = FrameSet.Sqmouse;
                     break;
                 case Monster.Manticore:
                     Frames = FrameSet.Manticore;
                     break;
+                case Monster.SqTombMonster:
+                    Frames = FrameSet.SqTombMonster;
+                    break;
+                case Monster.SqBalrog:
+                    Frames = FrameSet.SqBalrog;
+                    break;
+                case Monster.SqWoodenbox:
+                    Frames = FrameSet.SqWoodenbox;
+                    break;
+                case Monster.Sq0rgan:
+                    Frames = FrameSet.Sq0rgan;
+                    break;
+                case Monster.SqTerraWarrior:
+                    Frames = FrameSet.SqTerraWarrior;
+                    break;
+                case Monster.SqTerraArcher:
+                    Frames = FrameSet.SqTerraArcher;
+                    break;
+                case Monster.SqWarrior:
+                    Frames = FrameSet.SqWarrior;
+                    break;
+                case Monster.SqAssassin:
+                    Frames = FrameSet.SqAssassin;
+                    break;
+                case Monster.SqSkeletonsoldier:
+                    Frames = FrameSet.SqSkeletonsoldier;
+                    break; 
+                case Monster.SqChampion:
+                    Frames = FrameSet.SqChampion;
+                    break;
+                case Monster.SqWarlock:
+                    Frames = FrameSet.SqWarlock;
+                    break;
+                case Monster.SqSacrifice:
+                    Frames = FrameSet.SqSacrifice;
+                    break;
+                case Monster.SqWarriorSoul:
+                    Frames = FrameSet.SqWarriorSoul;
+                    break;
+                case Monster.SqArcherSoul:
+                    Frames = FrameSet.SqArcherSoul;
+                    break;
+                case Monster.SqTaoistSoul:
+                    Frames = FrameSet.SqTaoistSoul;
+                    break;
+                case Monster.SqAssassinSoul:
+                    Frames = FrameSet.SqAssassinSoul;
+                    break;
+                case Monster.SqWizardSoul:
+                    Frames = FrameSet.SqWizardSoul;
+                    break;
+                case Monster.SqGuru0verLord:
+                    Frames = FrameSet.SqGuru0verLord;
+                    break;
+                case Monster.SqGuruBloodWizard:
+                    Frames = FrameSet.SqGuruBloodWizard;
+                    break;
+                case Monster.SqBuddhaSoul:
+                    Frames = FrameSet.SqBuddhaSoul;
+                    break;
+                case Monster.GlacierWarrior:
+                    Frames = FrameSet.GlacierWarrior;
+                    break;
+                case Monster.ManEatingPlant:
+                    Frames = FrameSet.ManEatingPlant;
+                    break;
+                case Monster.LivingVines:
+                    Frames = FrameSet.LivingVines;
+                    break;
+                case Monster.FeatheredWolf:
+                    Frames = FrameSet.FeatheredWolf;
+                    break;
+                case Monster.WarBear:
+                    Frames = FrameSet.WarBear;
+                    break;
+                case Monster.MysteriousMonk:
+                    Frames = FrameSet.MysteriousMonk;
+                    break; 
+                case Monster.MysteriousMage:
+                    Frames = FrameSet.MysteriousMage;
+                    break;
+                case Monster.BlueMonk:
+                    Frames = FrameSet.BlueMonk;
+                    break;
+                case Monster.MysteriousAssassin:
+                    Frames = FrameSet.MysteriousAssassin;
+                    break;
+                case Monster.ReaperAssassin:
+                    Frames = FrameSet.ReaperAssassin;
+                    break;
+                case Monster.ReaperWizard:
+                    Frames = FrameSet.ReaperWizard;
+                    break;
+                case Monster.ReaperPriest:
+                    Frames = FrameSet.ReaperPriest;
+                    break;
+                case Monster.MutantHighPriest:
+                    Frames = FrameSet.MutantHighPriest;
+                    break;
+                case Monster.MutantBeserker:
+                    Frames = FrameSet.MutantBeserker;
+                    break;
+                case Monster.MutantGuardian:
+                    Frames = FrameSet.MutantGuardian;
+                    break;
+                case Monster.HammerDwarf:
+                    Frames = FrameSet.HammerDwarf;
+                    break;
+                case Monster.ArcherDwarf:
+                    Frames = FrameSet.ArcherDwarf;
+                    break;
+                case Monster.NobleWarrior:
+                    Frames = FrameSet.NobleWarrior;
+                    break;
+                case Monster.NobleArcher:
+                    Frames = FrameSet.NobleArcher;
+                    break;
+                case Monster.NoblePriest:
+                    Frames = FrameSet.NoblePriest;
+                    break;
+                case Monster.NobleAssassin:
+                    Frames = FrameSet.NobleAssassin;
+                    break;
+                case Monster.Swain:
+                    Frames = FrameSet.Swain;
+                    break;
+                case Monster.RedMutantPlant:
+                    Frames = FrameSet.RedMutantPlant;
+                    break;
+                case Monster.BlueMutantPlant:
+                    Frames = FrameSet.BlueMutantPlant;
+                    break;
+                case Monster.UndeadHammerDwarf:
+                    Frames = FrameSet.UndeadHammerDwarf;
+                    break;
+                case Monster.UndeadDwarfArcher:
+                    Frames = FrameSet.UndeadDwarfArcher;
+                    break;
+                case Monster.AncientStoneGolem:
+                    Frames = FrameSet.AncientStoneGolem;
+                    break;
+                case Monster.Serpentirian:
+                    Frames = FrameSet.Serpentirian;
+                    break;
+                case Monster.Butcher:
+                    Frames = FrameSet.Butcher;
+                    break;
+                case Monster.Riklebites:
+                    Frames = FrameSet.Riklebites;
+                    break;
+                case Monster.Windblade:
+                    Frames = FrameSet.Windblade;
+                    break;
+                case Monster.FrozenGolem:
+                    Frames = FrameSet.FrozenGolem;
+                    break;
+                case Monster.BestKing:
+                    Frames = FrameSet.BestKing;
+                    break;
+                case Monster.ShardGuardian:
+                    Frames = FrameSet.ShardGuardian;
+                    break;
+                case Monster.HoodedSummoner:
+                    Frames = FrameSet.HoodedSummoner;
+                    break;
+                case Monster.HoodedIceMage:
+                    Frames = FrameSet.HoodedIceMage;
+                    break;
+                case Monster.HoodedPriest:
+                    Frames = FrameSet.HoodedPriest;
+                    break;
+                case Monster.ShardMaiden:
+                    Frames = FrameSet.ShardMaiden;
+                    break;
+                case Monster.Furball:
+                    Frames = FrameSet.Furball;
+                    break;
+                case Monster.PeacockSpider:
+                    Frames = FrameSet.PeacockSpider;
+                    break;
+                case Monster.YangDevilNode:
+                    Frames = FrameSet.YangDevilNode;
+                    break;
+                case Monster.YinDevilNode:
+                    Frames = FrameSet.YinDevilNode;
+                    break;
+                case Monster.DarkCaptain:
+                    Frames = FrameSet.DarkCaptain;
+                    break;
+                case Monster.BlueSoul:
+                    Frames = FrameSet.BlueSoul;
+                    break;
+                case Monster.WoodBox:
+                    Frames = FrameSet.WoodBox;
+                    break;
+                case Monster.ClawBeast:
+                    Frames = FrameSet.ClawBeast;
+                    break;
+                case Monster.AxePlant:
+                    Frames = FrameSet.AxePlant;
+                    break;
+                case Monster.AvengingWarrior:
+                    Frames = FrameSet.AvengingWarrior;
+                    break;
+                case Monster.AvengingSpirit:
+                    Frames = FrameSet.AvengingSpirit;
+                    break;
+                case Monster.Nadz:
+                    Frames = FrameSet.Nadz;
+                    break;
+                case Monster.AvengerPlant:
+                    Frames = FrameSet.AvengerPlant;
+                    break;
+                case Monster.ArmedPlant:
+                    Frames = FrameSet.ArmedPlant;
+                    break;
+                case Monster.FloatingWraith:
+                    Frames = FrameSet.FloatingWraith;
+                    break;
+                case Monster.CreeperPlant:
+                    Frames = FrameSet.CreeperPlant;
+                    break;
+                case Monster.PlagueCrab:
+                    Frames = FrameSet.PlagueCrab;
+                    break;
+                case Monster.Mandrill:
+                    Frames = FrameSet.Mandrill;
+                    break;
+                case Monster.HornedCommander:
+                    Frames = FrameSet.HornedCommander;
+                    break;
+                case Monster.HornedSorceror:
+                    Frames = FrameSet.HornedSorceror;
+                    break;
+                case Monster.BoulderSpirit:
+                    Frames = FrameSet.BoulderSpirit;
+                    break;
+                case Monster.ScalyBeast:
+                    Frames = FrameSet.ScalyBeast;
+                    break;
+                case Monster.FloatingRock:
+                    Frames = FrameSet.FloatingRock;
+                    break;
+                case Monster.HornedWarrior:
+                    Frames = FrameSet.HornedWarrior;
+                    break;
+                case Monster.ColdArcher:
+                    Frames = FrameSet.ColdArcher;
+                    break;
+                case Monster.HornedArcher:
+                    Frames = FrameSet.HornedArcher;
+                    break;
+                case Monster.HornedMage:
+                    Frames = FrameSet.HornedMage;
+                    break;
+                case Monster.KingHydrax:
+                    Frames = FrameSet.KingHydrax;
+                    break;
+                case Monster.Hydrax:
+                    Frames = FrameSet.Hydrax;
+                    break;
+                case Monster.SackWarrior:
+                    Frames = FrameSet.SackWarrior;
+                    break;
+                case Monster.WereTiger:
+                    Frames = FrameSet.WereTiger;
+                    break;
+                case Monster.GlacierBeast:
+                    Frames = FrameSet.GlacierBeast;
+                    break;
+                case Monster.FurbolgCommander:
+                    Frames = FrameSet.FurbolgCommander;
+                    break;
+                case Monster.FurbolgGuard:
+                    Frames = FrameSet.FurbolgGuard;
+                    break;
+                case Monster.FurbolgArcher:
+                    Frames = FrameSet.FurbolgArcher;
+                    break;
+                case Monster.FurbolgWarrior:
+                    Frames = FrameSet.FurbolgWarrior;
+                    break;
+                case Monster.GlacierSnail:
+                    Frames = FrameSet.GlacierSnail;
+                    break;
+                case Monster.PurpleFaeFlower:
+                    Frames = FrameSet.PurpleFaeFlower;
+                    break;
+                case Monster.DarkDevil:
+                    Frames = FrameSet.DarkDevil;
+                    break;
+                case Monster.ZumaTaurus:
+                    Frames = FrameSet.ZumaTaurus;
+                    break;
+                case Monster.WoomaTaurus:
+                    Frames = FrameSet.WoomaTaurus;
+                    break;
+                case Monster.KingHog:
+                    Frames = FrameSet.KingHog;
+                    break;
+                case Monster.KingScorpion:
+                    Frames = FrameSet.KingScorpion;
+                    break;
+                case Monster.WoomaGuardian:
+                    Frames = FrameSet.WoomaGuardian;
+                    break;
+                case Monster.WhiteBoar:
+                    Frames = FrameSet.WhiteBoar;
+                    break;
+                case Monster.ZumaGuardian:
+                    Frames = FrameSet.ZumaGuardian;
+                    break;
+                case Monster.ZumaStatue:
+                    Frames = FrameSet.ZumaStatue;
+                    break;
+                case Monster.ZumaArcher:
+                    Frames = FrameSet.ZumaArcher;
+                    break;
+                case Monster.Ghoul:
+                    Frames = FrameSet.Ghoul;
+                    break;
+                case Monster.EvilSnake:
+                    Frames = FrameSet.EvilSnake;
+                    break;
+                case Monster.EvilTongs:
+                    Frames = FrameSet.EvilTongs;
+                    break;
+                case Monster.TreeQueen:
+                    Frames = FrameSet.TreeQueen;
+                    break;
+                case Monster.TreeGuardian:
+                    Frames = FrameSet.TreeGuardian;
+                    break;
+                case Monster.EarthGolem:
+                    Frames = FrameSet.EarthGolem;
+                    break;
+                case Monster.StoneGolem:
+                    Frames = FrameSet.StoneGolem;
+                    break;
+                case Monster.ElephantMan:
+                    Frames = FrameSet.ElephantMan;
+                    break;
+                case Monster.RhinoPriest:
+                    Frames = FrameSet.RhinoPriest;
+                    break;
+                case Monster.RhinoWarrior:
+                    Frames = FrameSet.RhinoWarrior;
+                    break;
+                case Monster.AssassinBird:
+                    Frames = FrameSet.AssassinBird;
+                    break;
+                case Monster.SwampWarrior:
+                    Frames = FrameSet.SwampWarrior;
+                    break;
+                case Monster.Mantis:
+                    Frames = FrameSet.Mantis;
+                    break;
+                case Monster.GasToad:
+                    Frames = FrameSet.GasToad;
+                    break;
+                case Monster.DarkOmaKing:
+                    Frames = FrameSet.DarkOmaKing;
+                    break;
+                case Monster.PowerUpBead:
+                    Frames = FrameSet.PowerUpBead;
+                    break;
+                case Monster.HealingBead:
+                    Frames = FrameSet.HealingBead;
+                    break;
+                case Monster.LightningBead:
+                    Frames = FrameSet.LightningBead;
+                    break;
+                case Monster.OmaWitchDoctor:
+                    Frames = FrameSet.OmaWitchDoctor;
+                    break;
+                case Monster.OmaMage:
+                    Frames = FrameSet.OmaMage;
+                    break;
+                case Monster.OmaAssassin:
+                    Frames = FrameSet.OmaAssassin;
+                    break;
+                case Monster.OmaSlasher:
+                    Frames = FrameSet.OmaSlasher;
+                    break;
+                case Monster.OmaBlest:
+                    Frames = FrameSet.OmaBlest;
+                    break;
+                case Monster.OmaCannibal:
+                    Frames = FrameSet.OmaCannibal;
+                    break;
+                case Monster.TwinHeadBeast:
+                    Frames = FrameSet.TwinHeadBeast;
+                    break;
+                case Monster.DarkBaboon:
+                    Frames = FrameSet.DarkBaboon;
+                    break;
+                case Monster.DarkWingedOma:
+                    Frames = FrameSet.DarkWingedOma;
+                    break;
+                case Monster.ChieftainSword:
+                    Frames = FrameSet.ChieftainSword;
+                    break;
+                case Monster.ChieftainArcher:
+                    Frames = FrameSet.ChieftainArcher;
+                    break;
+                case Monster.Leopard:
+                    Frames = FrameSet.Leopard;
+                    break;
+                case Monster.Turtlegrass:
+                    Frames = FrameSet.Turtlegrass;
+                    break;
+                case Monster.Bear:
+                    Frames = FrameSet.Bear;
+                    break;
+                case Monster.ManTree:
+                    Frames = FrameSet.ManTree;
+                    break;
+                case Monster.FrostTiger:
+                    Frames = FrameSet.FrostTiger;
+                    break;
+                case Monster.Kirin:
+                    Frames = FrameSet.Kirin;
+                    break;
+                case Monster.Tornado:
+                    Frames = FrameSet.Tornado;
+                    break;
+                case Monster.DragonArcher:
+                    Frames = FrameSet.DragonArcher;
+                    break;
+                case Monster.DragonWarrior:
+                    Frames = FrameSet.DragonWarrior;
+                    break;
+                case Monster.BlackTortoise:
+                    Frames = FrameSet.BlackTortoise;
+                    break;
+                case Monster.WaterDragon:
+                    Frames = FrameSet.WaterDragon;
+                    break;
+                case Monster.AncientBringer:
+                    Frames = FrameSet.AncientBringer;
+                    break;
+                case Monster.BurningZombie:
+                    Frames = FrameSet.BurningZombie;
+                    break;
+                case Monster.DeathCrawler:
+                    Frames = FrameSet.DeathCrawler;
+                    break;
+                case Monster.HardenRhino:
+                    Frames = FrameSet.HardenRhino;
+                    break;
+                case Monster.BloodBaboon:
+                    Frames = FrameSet.BloodBaboon;
+                    break;
+                case Monster.LightBeast:
+                    Frames = FrameSet.LightBeast;
+                    break;
+                case Monster.DarkBeast:
+                    Frames = FrameSet.DarkBeast;
+                    break;
+                case Monster.WhiteMammoth:
+                    Frames = FrameSet.WhiteMammoth;
+                    break;
+                case Monster.UndeadWolf:
+                    Frames = FrameSet.UndeadWolf;
+                    break;
+                case Monster.DemonWolf:
+                    Frames = FrameSet.DemonWolf;
+                    break;
+                case Monster.FrozenZombie:
+                    Frames = FrameSet.FrozenZombie;
+                    break;
+                case Monster.MudZombie:
+                    Frames = FrameSet.MudZombie;
+                    break;
+                case Monster.TucsonGeneral:
+                    Frames = FrameSet.TucsonGeneral;
+                    break;
+                case Monster.TucsonWarrior:
+                    Frames = FrameSet.TucsonWarrior;
+                    break;
+                case Monster.TucsonMage:
+                    Frames = FrameSet.TucsonMage;
+                    break;
+                case Monster.TucsonFighter:
+                    Frames = FrameSet.TucsonFighter;
+                    break;
+                case Monster.Tucson:
+                    Frames = FrameSet.Tucson;
+                    break;
+                case Monster.CannibalTentacles:
+                    Frames = FrameSet.CannibalTentacles;
+                    break;
+                case Monster.SandSnail:
+                    Frames = FrameSet.SandSnail;
+                    break;
+                case Monster.VisceralWorm:
+                    Frames = FrameSet.VisceralWorm;
+                    break;
+                case Monster.ArmadilloElder:
+                    Frames = FrameSet.ArmadilloElder;
+                    break;
+                case Monster.Armadillo:
+                    Frames = FrameSet.Armadillo;
+                    break;
+                case Monster.PlaguedTucson:
+                    Frames = FrameSet.PlaguedTucson;
+                    break;
+                case Monster.GeneralMeowMeow:
+                    Frames = FrameSet.GeneralMeowMeow;
+                    break;
+                case Monster.RestlessJar:
+                    Frames = FrameSet.RestlessJar;
+                    break;
+                case Monster.SeedingsGeneral:
+                    Frames = FrameSet.SeedingsGeneral;
+                    break;
+                case Monster.CatShaman:
+                    Frames = FrameSet.CatShaman;
+                    break;
+                case Monster.StrayCat:
+                    Frames = FrameSet.StrayCat;
+                    break;
+                case Monster.BlackHammerCat:
+                    Frames = FrameSet.BlackHammerCat;
+                    break;
+                case Monster.StainHammerCat:
+                    Frames = FrameSet.StainHammerCat;
+                    break;
+                case Monster.CatWidow:
+                    Frames = FrameSet.CatWidow;
+                    break;
+                case Monster.FireCat:
+                    Frames = FrameSet.FireCat;
+                    break;
+                case Monster.FightingCat:
+                    Frames = FrameSet.FightingCat;
+                    break;
+                case Monster.Jar2:
+                    Frames = FrameSet.Jar2;
+                    break;
+                case Monster.Jar1:
+                    Frames = FrameSet.Jar1;
+                    break;
+                case Monster.HellKeeper:
+                    Frames = FrameSet.HellKeeper;
+                    break;
+                case Monster.WitchDoctor:
+                    Frames = FrameSet.WitchDoctor;
+                    break;
+                case Monster.HellBolt:
+                    Frames = FrameSet.HellBolt;
+                    break;
+                case Monster.HellCannibal:
+                    Frames = FrameSet.HellCannibal;
+                    break;
+                case Monster.HellPirate:
+                    Frames = FrameSet.HellPirate;
+                    break;
+                case Monster.HellSlasher:
+                    Frames = FrameSet.HellSlasher;
+                    break;
+                case Monster.DarkDevourer:
+                    Frames = FrameSet.DarkDevourer;
+                    break;
+                case Monster.DreamDevourer:
+                    Frames = FrameSet.DreamDevourer;
+                    break;
+                case Monster.CyanoGhast:
+                    Frames = FrameSet.CyanoGhast;
+                    break;
+                case Monster.CrazyManworm:
+                    Frames = FrameSet.CrazyManworm;
+                    break;
+                case Monster.MutatedManworm:
+                    Frames = FrameSet.MutatedManworm;
+                    break;
+                case Monster.GhastlyLeecher:
+                    Frames = FrameSet.GhastlyLeecher;
+                    break;
+                case Monster.IcePillar:
+                    Frames = FrameSet.IcePillar;
+                    break;
+                case Monster.Blank2:
+                    Frames = FrameSet.Blank2;
+                    break;
+                case Monster.ManectricKing:
+                    Frames = FrameSet.ManectricKing;
+                    break;
+                case Monster.ManectricBlest:
+                    Frames = FrameSet.ManectricBlest;
+                    break;
+                case Monster.ManectricStaff:
+                    Frames = FrameSet.ManectricStaff;
+                    break;
+                case Monster.ManectricClaw:
+                    Frames = FrameSet.ManectricClaw;
+                    break;
+                case Monster.ManectricClub:
+                    Frames = FrameSet.ManectricClub;
+                    break;
+                case Monster.ManectricHammer:
+                    Frames = FrameSet.ManectricHammer;
+                    break;
+                case Monster.OmaKing:
+                    Frames = FrameSet.OmaKing;
+                    break;
+                case Monster.OmaGuard:
+                    Frames = FrameSet.OmaGuard;
+                    break;
+                case Monster.FlailOma:
+                    Frames = FrameSet.FlailOma;
+                    break;
+                case Monster.WingedOma:
+                    Frames = FrameSet.WingedOma;
+                    break;
+                case Monster.CrossbowOma:
+                    Frames = FrameSet.CrossbowOma;
+                    break;
+                case Monster.SwordOma:
+                    Frames = FrameSet.SwordOma;
+                    break;
+                case Monster.AxeOma:
+                    Frames = FrameSet.AxeOma;
+                    break;
+                case Monster.MinotaurKing:
+                    Frames = FrameSet.MinotaurKing;
+                    break;
+                case Monster.LeftGuard:
+                    Frames = FrameSet.LeftGuard;
+                    break;
+                case Monster.RightGuard:
+                    Frames = FrameSet.RightGuard;
+                    break;
+                case Monster.FireMinotaur:
+                    Frames = FrameSet.FireMinotaur;
+                    break;
+                case Monster.WindMinotaur:
+                    Frames = FrameSet.WindMinotaur;
+                    break;
+                case Monster.ElectricMinotaur:
+                    Frames = FrameSet.ElectricMinotaur;
+                    break;
+                case Monster.IceMinotaur:
+                    Frames = FrameSet.IceMinotaur;
+                    break;
+                case Monster.Minotaur:
+                    Frames = FrameSet.Minotaur;
+                    break;
+                case Monster.BoneLord:
+                    Frames = FrameSet.BoneLord;
+                    break;
+                case Monster.BoneCaptain:
+                    Frames = FrameSet.BoneCaptain;
+                    break;
+                case Monster.BoneSpearman:
+                    Frames = FrameSet.BoneSpearman;
+                    break;
+                case Monster.BoneBlademan:
+                    Frames = FrameSet.BoneBlademan;
+                    break;
+                case Monster.BoneArcher:
+                    Frames = FrameSet.BoneArcher;
+                    break;
+                case Monster.RoninGhoul:
+                    Frames = FrameSet.RoninGhoul;
+                    break;
+                case Monster.ToxicGhoul:
+                    Frames = FrameSet.ToxicGhoul;
+                    break;
+                case Monster.StoningStatue:
+                    Frames = FrameSet.StoningStatue;
+                    break;
+                case Monster.FlyingStatue:
+                    Frames = FrameSet.FlyingStatue;
+                    break;
+                case Monster.FrozenZumaStatue:
+                    Frames = FrameSet.FrozenZumaStatue;
+                    break;
+                case Monster.FrozenZumaGuardian:
+                    Frames = FrameSet.FrozenZumaGuardian;
+                    break;
+                case Monster.SpiderWarrior:
+                    Frames = FrameSet.SpiderWarrior;
+                    break;
+                case Monster.GreaterWeaver:
+                    Frames = FrameSet.GreaterWeaver;
+                    break;
+                case Monster.CrystalWeaver:
+                    Frames = FrameSet.CrystalWeaver;
+                    break;
+                case Monster.ArmingWeaver:
+                    Frames = FrameSet.ArmingWeaver;
+                    break;
+                case Monster.CrackingWeaver:
+                    Frames = FrameSet.CrackingWeaver;
+                    break;
+                case Monster.Weaver:
+                    Frames = FrameSet.Weaver;
+                    break;
+                case Monster.ValeBat:
+                    Frames = FrameSet.ValeBat;
+                    break;
+                case Monster.EvilApe:
+                    Frames = FrameSet.EvilApe;
+                    break;
+                case Monster.RedMoonEvil:
+                    Frames = FrameSet.RedMoonEvil;
+                    break;
+                case Monster.CrystalSpider:
+                    Frames = FrameSet.CrystalSpider;
+                    break;
+                case Monster.RedEvilApe:
+                    Frames = FrameSet.RedEvilApe;
+                    break;
+                case Monster.GrayEvilApe:
+                    Frames = FrameSet.GrayEvilApe;
+                    break;
+                case Monster.BigApe:
+                    Frames = FrameSet.BigApe;
+                    break;
+                case Monster.LureSpider:
+                    Frames = FrameSet.LureSpider;
+                    break;
+                case Monster.GreatSpider:
+                    Frames = FrameSet.GreatSpider;
+                    break;
+                case Monster.GangSpider:
+                    Frames = FrameSet.GangSpider;
+                    break;
+                case Monster.VenomSpider:
+                    Frames = FrameSet.VenomSpider;
+                    break;
+                case Monster.SpiderBat:
+                    Frames = FrameSet.SpiderBat;
+                    break;
+                case Monster.RootSpider:
+                    Frames = FrameSet.RootSpider;
+                    break;
+                case Monster.BombSpider:
+                    Frames = FrameSet.BombSpider;
+                    break;
+                case Monster.NdZombie:
+                    Frames = FrameSet.NdZombie;
+                    break;
+                case Monster.ClZombie:
+                    Frames = FrameSet.ClZombie;
+                    break;
+                case Monster.DigOutZombie:
+                    Frames = FrameSet.DigOutZombie;
+                    break;
+                case Monster.ShamanZombie:
+                    Frames = FrameSet.ShamanZombie;
+                    break; 
+                case Monster.FlamingWooma:
+                    Frames = FrameSet.FlamingWooma;
+                    break;
+                case Monster.WoomaWarrior:
+                    Frames = FrameSet.WoomaWarrior;
+                    break;
+                case Monster.WoomaFighter:
+                    Frames = FrameSet.WoomaFighter;
+                    break;
+                case Monster.WoomaSoldier:
+                    Frames = FrameSet.WoomaSoldier;
+                    break;
+                case Monster.Dung:
+                    Frames = FrameSet.Dung;
+                    break;
+                case Monster.Dark:
+                    Frames = FrameSet.Dark;
+                    break;
+                case Monster.Khazard:
+                    Frames = FrameSet.Khazard;
+                    break;
+                case Monster.VioletKekTal:
+                    Frames = FrameSet.VioletKekTal;
+                    break;
+                case Monster.KekTal:
+                    Frames = FrameSet.KekTal;
+                    break;
+                case Monster.BlueHoroBlaster:
+                    Frames = FrameSet.BlueHoroBlaster;
+                    break;
+                case Monster.HoroBlaster:
+                    Frames = FrameSet.HoroBlaster;
+                    break;
+                case Monster.SpiderFrog:
+                    Frames = FrameSet.SpiderFrog;
+                    break;
+                case Monster.RedFrogSpider:
+                    Frames = FrameSet.RedFrogSpider;
+                    break;
+                case Monster.BrownFrogSpider:
+                    Frames = FrameSet.BrownFrogSpider;
+                    break;
+                case Monster.BigHedgeKekTal:
+                    Frames = FrameSet.BigHedgeKekTal;
+                    break;
+                case Monster.HedgeKekTal:
+                    Frames = FrameSet.HedgeKekTal;
+                    break;
+                case Monster.CloudElement:
+                    Frames = FrameSet.CloudElement;
+                    break;
+                case Monster.ThunderElement:
+                    Frames = FrameSet.ThunderElement;
+                    break;
+                case Monster.GuardianRock:
+                    Frames = FrameSet.GuardianRock;
+                    break;
+                case Monster.TrapRock:
+                    Frames = FrameSet.TrapRock;
+                    break;
+                case Monster.WhiteFoxman:
+                    Frames = FrameSet.WhiteFoxman;
+                    break;
+                case Monster.BlackFoxman:
+                    Frames = FrameSet.BlackFoxman;
+                    break;
+                case Monster.RedFoxman:
+                    Frames = FrameSet.RedFoxman;
+                    break;
+                case Monster.RedThunderZuma:
+                    Frames = FrameSet.RedThunderZuma;
+                    break;
+                case Monster.BigRat:
+                    Frames = FrameSet.BigRat;
+                    break;
+                case Monster.BlackBoar:
+                    Frames = FrameSet.BlackBoar;
+                    break;
+                case Monster.RedBoar:
+                    Frames = FrameSet.RedBoar;
+                    break;
+                case Monster.SnakeScorpion:
+                    Frames = FrameSet.SnakeScorpion;
+                    break;
+                case Monster.BlackMaggot:
+                    Frames = FrameSet.BlackMaggot;
+                    break;
+                case Monster.BugBatMaggot:
+                    Frames = FrameSet.BugBatMaggot;
+                    break;
+                case Monster.BugBat:
+                    Frames = FrameSet.BugBat;
+                    break;
+                case Monster.WedgeMoth:
+                    Frames = FrameSet.WedgeMoth;
+                    break;
+                case Monster.EvilCentipede:
+                    Frames = FrameSet.EvilCentipede;
+                    break;
+                case Monster.Tongs:
+                    Frames = FrameSet.Tongs;
+                    break;
+                case Monster.WhimperingBee:
+                    Frames = FrameSet.WhimperingBee;
+                    break;
+                case Monster.GiantWorm:
+                    Frames = FrameSet.GiantWorm;
+                    break;
+                case Monster.Centipede:
+                    Frames = FrameSet.Centipede;
+                    break;
+                case Monster.Treasurebox:
+                    Frames = FrameSet.Treasurebox;
+                    break;
+                case Monster.Yimoogi:
+                    Frames = FrameSet.Yimoogi;
+                    break;
+                case Monster.GiantWhiteSnake:
+                    Frames = FrameSet.GiantWhiteSnake;
+                    break;
+                case Monster.YellowSnake:
+                    Frames = FrameSet.YellowSnake;
+                    break;
+                case Monster.BlueSnake:
+                    Frames = FrameSet.BlueSnake;
+                    break;
+                case Monster.CrawlerZombie:
+                    Frames = FrameSet.CrawlerZombie;
+                    break;
+                case Monster.BoneWhoo:
+                    Frames = FrameSet.BoneWhoo;
+                    break;
+                case Monster.BoneElite:
+                    Frames = FrameSet.BoneElite;
+                    break;
+                case Monster.BoneWarrior:
+                    Frames = FrameSet.BoneWarrior;
+                    break;
+                case Monster.BoneFighter:
+                    Frames = FrameSet.BoneFighter;
+                    break;
+                case Monster.Skeleton:
+                    Frames = FrameSet.Skeleton;
+                    break;
+                case Monster.AxeSkeleton:
+                    Frames = FrameSet.AxeSkeleton;
+                    break;
+                case Monster.Scorpion:
+                    Frames = FrameSet.Scorpion;
+                    break;
+                case Monster.CaveMaggot:
+                    Frames = FrameSet.CaveMaggot;
+                    break;
+                case Monster.CaveBat:
+                    Frames = FrameSet.CaveBat;
+                    break;
+                case Monster.GiantKeratoid:
+                    Frames = FrameSet.GiantKeratoid;
+                    break;
+                case Monster.SandWorm:
+                    Frames = FrameSet.SandWorm;
+                    break;
+                case Monster.SkyStinger:
+                    Frames = FrameSet.SkyStinger;
+                    break;
+                case Monster.ShellNipper:
+                    Frames = FrameSet.ShellNipper;
+                    break;
+                case Monster.Keratoid:
+                    Frames = FrameSet.Keratoid;
+                    break;
+                case Monster.TigerSnake:
+                    Frames = FrameSet.TigerSnake;
+                    break;
+                case Monster.RedSnake:
+                    Frames = FrameSet.RedSnake;
+                    break;
+                case Monster.LargeMushroom:
+                    Frames = FrameSet.LargeMushroom;
+                    break;
+                case Monster.CherryTree:
+                    Frames = FrameSet.CherryTree;
+                    break;
+                case Monster.EbonyTree:
+                    Frames = FrameSet.EbonyTree;
+                    break;
+                case Monster.ChestnutTree:
+                    Frames = FrameSet.ChestnutTree;
+                    break;
+                case Monster.ForestYeti:
+                    Frames = FrameSet.ForestYeti;
+                    break;
+                case Monster.OmaWarrior:
+                    Frames = FrameSet.OmaWarrior;
+                    break;
+                case Monster.OmaFighter:
+                    Frames = FrameSet.OmaFighter;
+                    break;
+                case Monster.Oma:
+                    Frames = FrameSet.Oma;
+                    break;
+                case Monster.CannibalPlant:
+                    Frames = FrameSet.CannibalPlant;
+                    break;
+                case Monster.SpittingSpider:
+                    Frames = FrameSet.SpittingSpider;
+                    break;
+                case Monster.RakingCat:
+                    Frames = FrameSet.RakingCat;
+                    break;
+                case Monster.HookingCat:
+                    Frames = FrameSet.HookingCat;
+                    break;
+                case Monster.Scarecrow:
+                    Frames = FrameSet.Scarecrow;
+                    break;
+                case Monster.Yob:
+                    Frames = FrameSet.Yob;
+                    break;
+                case Monster.Wolf:
+                    Frames = FrameSet.Wolf;
+                    break;
+                case Monster.Sheep:
+                    Frames = FrameSet.Sheep;
+                    break;
+                case Monster.Bull:
+                    Frames = FrameSet.Bull;
+                    break;
+                case Monster.Pig:
+                    Frames = FrameSet.Pig;
+                    break;
+                case Monster.Deer:
+                    Frames = FrameSet.Deer;
+                    break;
+                case Monster.Hen:
+                    Frames = FrameSet.Hen;
+                    break;
+                case Monster.IcePhantom:
+                    Frames = FrameSet.IcePhantom;
+                    break;
+                case Monster.SnakeTotem:
+                    Frames = FrameSet.SnakeTotem;
+                    break;
+                case Monster.SpittingToad:
+                    Frames = FrameSet.SpittingToad;
+                    break;
+                case Monster.VampireSpider:
+                    Frames = FrameSet.VampireSpider;
+                    break;
+                case Monster.HolyDeva:
+                    Frames = FrameSet.HolyDeva;
+                    break;
+                case Monster.Shinsu:
+                    Frames = FrameSet.Shinsu;
+                    break;
+                case Monster.BoneFamiliar:
+                    Frames = FrameSet.BoneFamiliar;
+                    break;
+                case Monster.KatanaGuard:
+                    Frames = FrameSet.KatanaGuard;
+                    break;
+                case Monster.Guard2:
+                    Frames = FrameSet.Guard2;
+                    break;
+                case Monster.TaoistGuard:
+                    Frames = FrameSet.TaoistGuard;
+                    break;
+                case Monster.Guard:
+                    Frames = FrameSet.Guard;
+                    break;
+                case Monster.ArcherGuard:
+                    Frames = FrameSet.ArcherGuard;
+                    break;
+                case Monster.CharmedSnake:
+                    Frames = FrameSet.CharmedSnake;
+                    break;
+                case Monster.FrozenSoldier:
+                    Frames = FrameSet.FrozenSoldier;
+                    break;
+                case Monster.FrozenFighter:
+                    Frames = FrameSet.FrozenFighter;
+                    break;
+                case Monster.FrozenArcher:
+                    Frames = FrameSet.FrozenArcher;
+                    break;
+                case Monster.FrozenKnight:
+                    Frames = FrameSet.FrozenKnight;
+                    break;
+                case Monster.SnowWolf:
+                    Frames = FrameSet.SnowWolf;
+                    break;
+                case Monster.SnowWolfKing:
+                    Frames = FrameSet.SnowWolfKing;
+                    break;
+                case Monster.FrozenMiner:
+                    Frames = FrameSet.FrozenMiner;
+                    break;
+                case Monster.FrozenAxeman:
+                    Frames = FrameSet.FrozenAxeman;
+                    break;
+                case Monster.FrozenMagician:
+                    Frames = FrameSet.FrozenMagician;
+                    break;
+                case Monster.SnowYeti:
+                    Frames = FrameSet.SnowYeti;
+                    break;
+                case Monster.IceCrystalSoldier:
+                    Frames = FrameSet.IceCrystalSoldier;
+                    break;
+                case Monster.DarkWraith:
+                    Frames = FrameSet.DarkWraith;
+                    break;
+                case Monster.DarkSpirit:
+                    Frames = FrameSet.DarkSpirit;
+                    break;
+                case Monster.CrystalBeast:
+                    Frames = FrameSet.CrystalBeast;
+                    break;
+                case Monster.Guard3:
+                    Frames = FrameSet.Guard3;
+                    break;
+                case Monster.ArcherGuard3:
+                    Frames = FrameSet.ArcherGuard3;
+                    break;
+                case Monster.Football:
+                    Frames = FrameSet.Football;
+                    break;
+                case Monster.DarkGhost:
+                    Frames = FrameSet.DarkGhost;
+                    break;
+                case Monster.RedTurtle:
+                    Frames = FrameSet.RedTurtle;
+                    break;
+                case Monster.GreenTurtle:
+                    Frames = FrameSet.GreenTurtle;
+                    break;
+                case Monster.BlueTurtle:
+                    Frames = FrameSet.BlueTurtle;
+                    break;
+                case Monster.TowerTurtle:
+                    Frames = FrameSet.TowerTurtle;
+                    break;
+                case Monster.FinialTurtle:
+                    Frames = FrameSet.FinialTurtle;
+                    break;
+                case Monster.DarkTurtle:
+                    Frames = FrameSet.DarkTurtle;
+                    break;
+                case Monster.LightTurtle:
+                    Frames = FrameSet.LightTurtle;
+                    break;
+                case Monster.TurtleKing:
+                    Frames = FrameSet.TurtleKing;
+                    break;
+                case Monster.ManectricSlave:
+                    Frames = FrameSet.ManectricSlave;
+                    break;
+                case Monster.TrollHammer:
+                    Frames = FrameSet.TrollHammer;
+                    break;
+                case Monster.TrollBomber:
+                    Frames = FrameSet.TrollBomber;
+                    break;
+                case Monster.TrollStoner:
+                    Frames = FrameSet.TrollStoner;
+                    break;
+                case Monster.FlameMage:
+                    Frames = FrameSet.FlameMage;
+                    break;
+                case Monster.FlameSpear:
+                    Frames = FrameSet.FlameSpear;
+                    break;
+                case Monster.FlameScythe:
+                    Frames = FrameSet.FlameScythe;
+                    break;
+                case Monster.FlameAssassin:
+                    Frames = FrameSet.FlameAssassin;
+                    break;
+                case Monster.TrollKing:
+                    Frames = FrameSet.TrollKing;
+                    break;
+                case Monster.FlameQueen:
+                    Frames = FrameSet.FlameQueen;
+                    break;
+                case Monster.HellKnight1:
+                    Frames = FrameSet.HellKnight1;
+                    break;
+                case Monster.HellKnight2:
+                    Frames = FrameSet.HellKnight2;
+                    break;
+                case Monster.HellKnight3:
+                    Frames = FrameSet.HellKnight3;
+                    break;
+                case Monster.HellKnight4:
+                    Frames = FrameSet.HellKnight4;
+                    break;
+                case Monster.HellLord:
+                    Frames = FrameSet.HellLord;
+                    break;
+                case Monster.Behemoth:
+                    Frames = FrameSet.Behemoth;
+                    break;
+                case Monster.Snake14:
+                    Frames = FrameSet.Snake14;
+                    break;
+                case Monster.WarriorScroll:
+                    Frames = FrameSet.WarriorScroll;
+                    break;
+                case Monster.TaoistScroll:
+                    Frames = FrameSet.TaoistScroll;
+                    break;
+                case Monster.WizardScroll:
+                    Frames = FrameSet.WizardScroll;
+                    break;
+                case Monster.AssassinScroll:
+                    Frames = FrameSet.AssassinScroll;
+                    break;
+                case Monster.WingedTigerLord:
+                    Frames = FrameSet.WingedTigerLord;
+                    break;
+                case Monster.FlameTiger:
+                    Frames = FrameSet.FlameTiger;
+                    break;
+                case Monster.RedYimoogi:
+                    Frames = FrameSet.RedYimoogi;
+                    break;
+                case Monster.BlueSanta:
+                    Frames = FrameSet.BlueSanta;
+                    break;
+                case Monster.OldSpittingSpider:
+                    Frames = FrameSet.OldSpittingSpider;
+                    break;
+                case Monster.Catapult2:
+                    Frames = FrameSet.Catapult2;
+                    break;
+                case Monster.GiantEgg:
+                    Frames = FrameSet.GiantEgg;
+                    break;
+                case Monster.SnowTree:
+                    Frames = FrameSet.SnowTree;
+                    break;
+                case Monster.Snowman:
+                    Frames = FrameSet.Snowman;
+                    break;
+                case Monster.SnowPile:
+                    Frames = FrameSet.SnowPile;
+                    break;
+                case Monster.TailedLion:
+                    Frames = FrameSet.TailedLion;
+                    break;
+                case Monster.MudPile:
+                    Frames = FrameSet.MudPile;
+                    break;
+                case Monster.HalloweenScythe:
+                    Frames = FrameSet.HalloweenScythe;
+                    break;
+                case Monster.GingerBreadman:
+                    Frames = FrameSet.GingerBreadman;
+                    break;
+                case Monster.DarkBrownWolf:
+                    Frames = FrameSet.DarkBrownWolf;
+                    break;
+                case Monster.DarkDustPile:
+                    Frames = FrameSet.DarkDustPile;
+                    break;
+                case Monster.HighAssassin:
+                    Frames = FrameSet.HighAssassin;
+                    break;
+                case Monster.ChristmasTree:
+                    Frames = FrameSet.ChristmasTree;
+                    break;
+                case Monster.Bush:
+                    Frames = FrameSet.Bush;
+                    break;
+                case Monster.ArcherGuard2:
+                    Frames = FrameSet.ArcherGuard2;
+                    break;
+                case Monster.Shinsu1:
+                    Frames = FrameSet.Shinsu1;
+                    break; 
+                case Monster.SiegeRepairman:
+                    Frames = FrameSet.SiegeRepairman;
+                    break;
+                case Monster.BattleStandard:
+                    Frames = FrameSet.BattleStandard;
+                    break;
+                case Monster.LionRiderMale:
+                    Frames = FrameSet.LionRiderMale;
+                    break;
+                case Monster.LionRiderFemale:
+                    Frames = FrameSet.LionRiderFemale;
+                    break;
+                case Monster.NamelessGhost:
+                    Frames = FrameSet.NamelessGhost;
+                    break;
+                case Monster.ChaosGhost:
+                    Frames = FrameSet.ChaosGhost;
+                    break;
+                case Monster.FrostYeti:
+                    Frames = FrameSet.FrostYeti;
+                    break; 
+                case Monster.IceGuard:
+                    Frames = FrameSet.IceGuard;
+                    break; 
+                case Monster.WaterGuard:
+                    Frames = FrameSet.WaterGuard;
+                    break; 
+                case Monster.ElementGuard:
+                    Frames = FrameSet.ElementGuard;
+                    break;
+                case Monster.DemonGuard:
+                    Frames = FrameSet.DemonGuard;
+                    break; 
+                case Monster.PoisonHugger:
+                    Frames = FrameSet.PoisonHugger;
+                    break;
+                case Monster.MutatedHugger:
+                    Frames = FrameSet.MutatedHugger;
+                    break;
+                case Monster.Snake10:
+                    Frames = FrameSet.Snake10;
+                    break;
+                case Monster.Snake11:
+                    Frames = FrameSet.Snake11;
+                    break;
+                case Monster.Snake12:
+                    Frames = FrameSet.Snake12;
+                    break;
+                case Monster.Snake13:
+                    Frames = FrameSet.Snake13;
+                    break;
+                case Monster.Snake15:
+                    Frames = FrameSet.Snake15;
+                    break;
+                case Monster.Snake16:
+                    Frames = FrameSet.Snake16;
+                    break;
+                case Monster.Snake17:
+                    Frames = FrameSet.Snake17;
+                    break;
+                case Monster.Bunny:
+                    Frames = FrameSet.Bunny;
+                    break;
+                case Monster.TucsonEgg:
+                    Frames = FrameSet.TucsonEgg;
+                    break; 
+                case Monster.RedOrb:
+                    Frames = FrameSet.RedOrb;
+                    break; 
+                case Monster.BlueOrb:
+                    Frames = FrameSet.BlueOrb;
+                    break;
+                case Monster.YellowOrb:
+                    Frames = FrameSet.YellowOrb;
+                    break;
+                case Monster.GreenOrb:
+                    Frames = FrameSet.GreenOrb;
+                    break;
+                case Monster.WhiteOrb:
+                    Frames = FrameSet.WhiteOrb;
+                    break;
+                case Monster.FatalLotus:
+                    Frames = FrameSet.FatalLotus;
+                    break;
+                case Monster.AntCommander:
+                    Frames = FrameSet.AntCommander;
+                    break;
+                case Monster.CargoBoxwithlogo:
+                    Frames = FrameSet.CargoBoxwithlogo;
+                    break;
+                case Monster.Doe:
+                    Frames = FrameSet.Doe;
+                    break;
+                case Monster.AngryReindeer:
+                    Frames = FrameSet.AngryReindeer;
+                    break;
+                case Monster.Ram1:
+                    Frames = FrameSet.Ram1;
+                    break;
+                case Monster.Ram2:
+                    Frames = FrameSet.Ram2;
+                    break;
+                case Monster.Kite:
+                    Frames = FrameSet.Kite;
+                    break;
+                case Monster.KingKong:
+                    Frames = FrameSet.KingKong;
+                    break;
+
                 default:
                     if (BodyLibrary != null)
                     {
