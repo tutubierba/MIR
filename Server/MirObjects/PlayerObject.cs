@@ -5595,6 +5595,7 @@ namespace Server.MirObjects
                     break;
                 case ItemType.Script:
                     CallDefaultNPC(DefaultNPCType.UseItem, item.Info.Shape);
+                    Console.WriteLine(item.Info.Shape); 
                     break;
                 case ItemType.Food:
                     temp = Info.Equipment[(int)EquipmentSlot.Mount];
@@ -10202,8 +10203,12 @@ namespace Server.MirObjects
         #endregion
 
         #region Quests
-
-        public void AcceptQuest(int index)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="index">任务序号</param>
+        /// <param name="UseImteQuest">如果为使用物品获取任务则为2否则为空，默认不填</param>
+        public void AcceptQuest(int index, int UseItemQuest = 0)
         {
             bool canAccept = true;
 
@@ -10211,17 +10216,21 @@ namespace Server.MirObjects
 
             QuestInfo info = Envir.QuestInfoList.FirstOrDefault(d => d.Index == index);
 
-            NPCObject npc = null;
-
-            for (int i = CurrentMap.NPCs.Count - 1; i >= 0; i--)
+            if(UseItemQuest == 0)
             {
-                if (CurrentMap.NPCs[i].ObjectID != info.NpcIndex) continue;
+                NPCObject npc = null;
 
-                if (!Functions.InRange(CurrentMap.NPCs[i].CurrentLocation, CurrentLocation, Globals.DataRange)) break;
-                npc = CurrentMap.NPCs[i];
-                break;
+                for (int i = CurrentMap.NPCs.Count - 1; i >= 0; i--)
+                {
+                    if (CurrentMap.NPCs[i].ObjectID != info.NpcIndex) continue;
+
+                    if (!Functions.InRange(CurrentMap.NPCs[i].CurrentLocation, CurrentLocation, Globals.DataRange)) break;
+                    npc = CurrentMap.NPCs[i];
+                    break;
+                }
+                if (npc == null || !npc.VisibleLog[Info.Index] || !npc.Visible) return;
             }
-            if (npc == null || !npc.VisibleLog[Info.Index] || !npc.Visible) return;
+
 
             if (!info.CanAccept(this))
             {

@@ -109,6 +109,7 @@ namespace Server.MirObjects
         ReviveHero,
         SealHero,
         CreateMapInstance,
-        RemoveMapInstance
+        RemoveMapInstance,
+        SETQUEST,
     }
 }

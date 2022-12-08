@@ -133,6 +133,7 @@ namespace LibraryEditor
             writer.Write(fBytes);
 
             writer.Write(Frames.Keys.Count);
+            Console.WriteLine(Frames.Keys.Count);
             foreach (var action in Frames.Keys)
             {
                 writer.Write((byte)action);
