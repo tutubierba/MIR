@@ -406,6 +406,11 @@ namespace Server.MirObjects
             switch (parts[0].ToUpper())
             {
 
+                case "SETQUEST":
+                    if (parts.Length < 2) return;
+                    acts.Add(new NPCActions(ActionType.SETQUEST, parts[1], parts[2]));
+                    break;
+
 
                 case "CREATEMAPINSTANCE":
                     if (parts.Length < 4) return;
@@ -2822,6 +2827,10 @@ namespace Server.MirObjects
 
                 switch (act.Type)
                 {
+                    case ActionType.SETQUEST:
+                        player.AcceptQuest(int.Parse(param[0]), int.Parse(param[1]));
+                        break;
+
 
                     case ActionType.CreateMapInstance:
                         Envir.CreateInstanceMap(param[0], player.Name,param[3]);
@@ -2847,7 +2856,7 @@ namespace Server.MirObjects
                         break;
                     case ActionType.InstanceMove:
                         {
-                            Console.WriteLine(param[0]);
+                            //Console.WriteLine(param[0]);
                             if (!int.TryParse(param[1], out int x)) return;
                             if (!int.TryParse(param[2], out int y)) return;
                             string name;

@@ -85,7 +85,7 @@ namespace Client
         //public static string IPAddress = "43.143.184.63";
         //public static int Port = 7625;
         public static string IPAddress = "127.0.0.1";
-        public static int Port = 7000;
+        public static int Port = 7625;
         public const int TimeOut = 5000;
 
         //Sound

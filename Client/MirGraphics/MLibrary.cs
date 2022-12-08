@@ -495,6 +495,7 @@ namespace Client.MirGraphics
         {
             _initialized = true;
 
+
             if (!File.Exists(_fileName))
                 return;
 
@@ -523,6 +524,10 @@ namespace Client.MirGraphics
                 for (int i = 0; i < _count; i++)
                     _indexList[i] = _reader.ReadInt32();
 
+                if (_fileName == @".\Data\Monster\607.Lib")
+                {
+                    Console.WriteLine("asdddd");
+                }
                 if (currentVersion >= 3)
                 {
                     _fStream.Seek(frameSeek, SeekOrigin.Begin);

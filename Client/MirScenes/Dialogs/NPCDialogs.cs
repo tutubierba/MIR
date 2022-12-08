@@ -227,7 +227,7 @@ namespace Client.MirScenes.Dialogs
 
         private void ButtonClicked(string action)
         {
-            Console.WriteLine(action);
+            //Console.WriteLine(action);
             if (action == "@Exit")
             {
                 Hide();

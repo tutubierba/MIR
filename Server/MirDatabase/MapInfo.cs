@@ -47,7 +47,7 @@ namespace Server.MirDatabase
         {
             Index = reader.ReadInt32();
             FileName = reader.ReadString();
-            Console.WriteLine(FileName);
+            //Console.WriteLine(FileName);
             Title = reader.ReadString();
             MiniMap = reader.ReadUInt16();
             Light = (LightSetting) reader.ReadByte();

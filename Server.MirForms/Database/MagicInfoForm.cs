@@ -52,7 +52,7 @@ namespace Server
              }
              else
              {
-                Console.WriteLine(_selectedMagicInfo.ToString());
+                //Console.WriteLine(_selectedMagicInfo.ToString());
                 tabControl1.Enabled = true;
                  lblSelected.Text = "Selected Skill: " + _selectedMagicInfo.ToString();
                  lblDamageExample.Text =
